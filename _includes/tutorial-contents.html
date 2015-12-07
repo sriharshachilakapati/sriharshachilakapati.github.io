@@ -1,0 +1,23 @@
+{% for item in include.items %}
+    {% assign class1 = '' %}
+    {% assign class2 = '' %}
+    {% assign href = item.href %}
+
+    {% if page.url == item.href %}
+        {% assign href = '#' %}
+
+        {% if include.child == true %}
+            {% assign class1 = 'activeli' %}
+        {% endif %}
+    {% endif %}
+
+    {% if include.child == true %}
+        {% assign class2 = 'subli' %}
+    {% endif %}
+
+    <li><a class="{{ class1 }} {{ class2 }}" href="{{ href }}">{{ item.text }}</a></li>
+
+    {% if item.children and item.section == page.section and page.section != 0 %}
+        {% include tutorial-contents.html child=true items=item.children %}
+    {% endif %}
+{% endfor %}

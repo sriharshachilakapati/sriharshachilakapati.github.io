@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav">
+    {% for item in include.nav %}
+        <li>
+            <a href="{{ site.url }}/{{ item.href }}">{{ item.title }}</a>
+        </li>
+        
+        {% if item.children %}
+            {% include navigation.html nav=item.children %}
+        {% endif %}
+    {% endfor %}
+</ul>

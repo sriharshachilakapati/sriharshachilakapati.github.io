@@ -1,0 +1,7 @@
+{% assign identifier = page.url %}
+
+{% if include.identifier %}
+    {% assign identifier = include.identifier %}
+{% endif %}
+
+<span class="disqus-comment-count" data-disqus-url="http://goharsha.com{{ identifier }}/"></span>

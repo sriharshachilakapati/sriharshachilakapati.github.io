@@ -1,0 +1,25 @@
+# Site settings
+title: GoHarsha.com
+email: hello@goharsha.com
+
+description: >
+  GoHarsha.com showcases the Programming World of Sri Harsha Chilakapati.
+  It is where he enjoys writing about programming, his experiences and his
+  tutorials.
+
+permalink: "blog/:title"
+baseurl: ""
+
+url: "" #Generic URL for both localhost and server
+
+# Blog pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Server settings
+host: '0.0.0.0'
+port: '80'

@@ -1,0 +1,54 @@
+<head>
+    <title>{{ page.title }} - GoHarsha.com</title>
+
+    <!-- Meta Data to describe the page -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sri Harsha Chilakapati">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 50 }}{% endif %}">
+    <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+	<!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config
+		({
+			TeX: { extensions: ["color.js"] }
+		});
+	</script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <link rel="stylesheet" href="{{site.url}}/css/main.css">
+    <link rel="stylesheet" href="{{site.url}}/css/github.css">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ site.url }}/assets/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico" type="image/x-icon"/>
+
+    {% if page.url == '/404.html' %}
+        <META http-equiv="refresh" content="5;URL={{ site.url }}/">
+    {% endif %}
+
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message"  : "This website (rather static) doesn't really care who you are, but tools such as Google Analytics and Google Adsense may use cookies to track you.",
+            "dismiss"  : "Got it!",
+            "learnMore": "More info",
+            "link"     : "",
+            "theme"    : "dark-bottom"
+        };
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+</head>
