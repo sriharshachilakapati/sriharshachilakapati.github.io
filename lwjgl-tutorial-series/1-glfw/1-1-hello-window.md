@@ -12,19 +12,11 @@ If you still haven’t configured LWJGL with your project, the process is very s
 {% highlight sh %}
 .
 ├── doc
-├── jar            # The JAR files we need will be here
+├── jar            # The JAR file we need will be here
 ├── native         # The natives we need will be here
-│   ├── linux
-│   │   ├── x64
-│   │   └── x86
-│   ├── macosx
-│   │   └── x64
-│   └── windows
-│       ├── x64
-│       └── x86
 └── src.zip        # This is the source code of LWJGL
 
-12 directories, 19 files
+4 directories, 30 files
 {% endhighlight %}
 
 The above is the directory tree of the LWJGL download. If you take a look, you will find three main directories, which contains the docs, jars and also the natives which are required.
@@ -39,11 +31,17 @@ The setup is very simple, just copy the `jar` and `native` directories to the di
 
 Now that you have your project ready configured with LWJGL, now we can start creating the window. To provide windowing stuff, LWJGL relies on GLFW library. The GLFW bindings in LWJGL are provided in the `org.lwjgl.glfw` package. To make things easy, I will be using static imports to import the members of the `org.lwjgl.glfw.GLFW` class.
 
+{% comment %}
+```java
+{% endcomment %}
 {% highlight java %}
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
 {% endhighlight %}
+{% comment %}
+```
+{% endcomment %}
 
 We also import the `GL11` class members and `MemoryUtil` class members in our code. I’ll explain the `GL11` imports later in the coming up tutorials. We imported `MemoryUtil` class because it provides us the very useful `NULL` constant to Java. Note that this `NULL` constant is different from the Java’s `null` keyword.
 
