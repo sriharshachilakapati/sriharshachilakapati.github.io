@@ -105,7 +105,8 @@ h1, h2, h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     color: #1ba39c;
-    margin-top: 20px !important;
+    margin-top: 20px !important;    
+    text-align: left !important;
 }
 
 a {
