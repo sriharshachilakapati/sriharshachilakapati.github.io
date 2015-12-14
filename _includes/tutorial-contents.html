@@ -15,9 +15,23 @@
         {% assign class2 = 'subli' %}
     {% endif %}
 
-    <li><a class="{{ class1 }} {{ class2 }}" href="{{ href }}">{{ item.text }}</a></li>
+    <li>
+        <a class="{{ class1 }} {{ class2 }}" href="{{ href }}">
+            {% if item.exists == false %}
+                <span style="color: #bb0000 !important;">
+            {% endif %}
 
-    {% if item.children and item.section == page.section and page.section != 0 %}
+            {{ item.text }}
+
+            {% if item.exists == false %}
+                </span>
+            {% endif %}
+        </a>
+    </li>
+
+    {% if item.children and include.showall == true %}
+        {% include tutorial-contents.html child=true items=item.children %}
+    {% elsif item.children and item.section == page.section and page.section != 0 %}
         {% include tutorial-contents.html child=true items=item.children %}
     {% endif %}
 {% endfor %}
