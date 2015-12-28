@@ -7,13 +7,15 @@
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="glyphicon glyphicon-th"></span>
                 </button>
-                
+
                 <a class="navbar-brand" href="/">{{ site.title }}</a>
             </div>
-            
+
             <!-- The actual menu content -->
             <div class="collapse navbar-collapse" id="navbar-content">
-                {% include navigation.html nav=site.data.navigation %}
+                <ul class="nav navbar-nav">
+                    {% include navigation.html nav=site.data.navigation %}
+                </ul>
             </div>
         </div>
     </nav>

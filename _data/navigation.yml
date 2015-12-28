@@ -1,8 +1,11 @@
-- title: "LWJGL Tutorial Series"
-  href: "lwjgl-tutorial-series"
+- title: "Tutorials"
+  href: "#"
+  children:
+      - title: "LWJGL Tutorial Series"
+        href: "lwjgl-tutorial-series"
 
-- title: "WebGL4J Tutorial Series"
-  href: "webgl4j-tutorial-series"
+      - title: "WebGL4J Tutorial Series"
+        href: "webgl4j-tutorial-series"
 
 - title: "ClassJS"
   href: "classjs"

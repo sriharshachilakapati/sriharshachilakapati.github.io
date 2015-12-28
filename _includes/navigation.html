@@ -1,11 +1,17 @@
-<ul class="nav navbar-nav">
-    {% for item in include.nav %}
+{% for item in include.nav %}
+    {% if item.children %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                {{ item.title }}
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                {% include navigation.html nav=item.children %}
+            </ul>
+        </li>
+    {% else %}
         <li>
             <a href="{{ site.url }}/{{ item.href }}">{{ item.title }}</a>
         </li>
-        
-        {% if item.children %}
-            {% include navigation.html nav=item.children %}
-        {% endif %}
-    {% endfor %}
-</ul>
+    {% endif %}
+{% endfor %}
