@@ -194,14 +194,14 @@ Here the task `superDev` is used to run the development mode, and it calls the `
 
 ## Adding WebGL4J to the project
 
-It's now finally time to add WebGL4J library as the dependency. For this tutorial series, we will be using the latest version of WebGL4J as of this writing, which is 0.2.7. We will be using WebGL4J from the maven central repository. Also let's add in some of the additional dependencies. One thing to keep a note, there is `gwt-servlet` library in the dependencies even though we don't use it. That is because if we don't specify it there, then it is added by default by the gwt plugin.
+It's now finally time to add WebGL4J library as the dependency. For this tutorial series, we will be using the latest version of WebGL4J as of this writing, which is 0.2.8. We will be using WebGL4J from the maven central repository. Also let's add in some of the additional dependencies. One thing to keep a note, there is `gwt-servlet` library in the dependencies even though we don't use it. That is because if we don't specify it there, then it is added by default by the gwt plugin.
 
 {% comment %}
 ```groovy
 {% endcomment %}
 {% highlight groovy %}
 dependencies {
-    providedCompile 'com.goharsha:webgl4j:0.2.7'
+    providedCompile 'com.goharsha:webgl4j:0.2.8'
     providedCompile 'com.google.gwt:gwt-user:2.7.0'
     providedCompile 'com.google.gwt:gwt-servlet:2.7.0'
 }
@@ -336,7 +336,7 @@ Of course to make it work you have to static import the functions in the class `
 
 The source code for this tutorial is available at [GitHub](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/tree/6e0f3d97b6834ce8c7604d63a8a51f1396a7df77) repository.
 
-  - [build.gradle](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/6e0f3d97b6834ce8c7604d63a8a51f1396a7df77/build.gradle)
-  - [index.html](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/6e0f3d97b6834ce8c7604d63a8a51f1396a7df77/src/main/webapp/index.html)
-  - [client.gwt.xml](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/6e0f3d97b6834ce8c7604d63a8a51f1396a7df77/src/main/java/com/shc/tutorial/webgl4j/client.gwt.xml)
-  - [Main.java](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/6e0f3d97b6834ce8c7604d63a8a51f1396a7df77/src/main/java/com/shc/tutorial/webgl4j/client/Main.java)
+  - [build.gradle](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/b2f2828f03fa6daf81e6e03d110de49b7db3a225/build.gradle)
+  - [index.html](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/b2f2828f03fa6daf81e6e03d110de49b7db3a225/src/main/webapp/index.html)
+  - [client.gwt.xml](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/b2f2828f03fa6daf81e6e03d110de49b7db3a225/src/main/java/com/shc/tutorial/webgl4j/client.gwt.xml)
+  - [Main.java](https://github.com/sriharshachilakapati/WebGL4J-Tutorial-Series/blob/b2f2828f03fa6daf81e6e03d110de49b7db3a225/src/main/java/com/shc/tutorial/webgl4j/client/Main.java)
