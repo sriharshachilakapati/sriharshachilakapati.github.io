@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{{ page.title }} - GoHarsha.com</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sri Harsha Chilakapati">
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}">
+        <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
+
+        <!-- Favicon -->
+        <link rel="icon" href="{{ site.url }}/assets/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico" type="image/x-icon"/>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="{{ site.url }}/revealjs/css/reveal.css">
+        <link rel="stylesheet" href="{{ site.url }}/revealjs/css/theme/black.css">
+
+        <style type="text/css">
+
+        </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = "{{ site.url }}/revealjs/" + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css'
+                                                                                                  : 'css/print/paper.css');
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="{{ site.url }}/revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                {{ content }}
+			</div>
+		</div>
+
+		<script src="{{ site.url }}/revealjs/lib/js/head.min.js"></script>
+		<script src="{{ site.url }}/revealjs/js/reveal.js"></script>
+
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center:   true,
+                width:    1280,
+                height:   720,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
