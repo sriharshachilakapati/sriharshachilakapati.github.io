@@ -297,6 +297,9 @@ I won't be going into too much details here, as it's already too long for this t
 ```java
 {% endcomment %}
 {% highlight java %}
+// Import the WebGL10 methods statically
+import static com.shc.webgl4j.client.WebGL10.*;
+
 // The first thing one should do is to create a canvas. It is required to perform WebGL rendering.
 Canvas canvas = Canvas.createIfSupported();
 
