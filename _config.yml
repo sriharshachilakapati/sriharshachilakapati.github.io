@@ -20,6 +20,11 @@ paginate_path: "/blog/page:num/"
 markdown: kramdown
 highlighter: rouge
 
+# Markdown settings
+kramdown:
+    input: 'GFM'
+    syntax-highlighter: rouge
+
 # Server settings
 host: '0.0.0.0'
 port: '80'
