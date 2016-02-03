@@ -7,7 +7,7 @@ description: >
   It is where he enjoys writing about programming, his experiences and his
   tutorials.
 
-permalink: "blog/:title"
+permalink: "blog/:title/"
 baseurl: ""
 
 url: "" #Generic URL for both localhost and server
