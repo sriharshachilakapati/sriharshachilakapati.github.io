@@ -4,4 +4,8 @@
     {% assign identifier = include.identifier %}
 {% endif %}
 
-<span class="disqus-comment-count" data-disqus-url="http://goharsha.com{{ identifier }}"></span>
+{% if page.layout == 'post' %}
+    <span class="disqus-comment-count" data-disqus-url="http://goharsha.com{{ identifier }}"></span>
+{% else %}
+    <span class="disqus-comment-count" data-disqus-url="http://goharsha.com{{ identifier }}/"></span>
+{% endif %}
