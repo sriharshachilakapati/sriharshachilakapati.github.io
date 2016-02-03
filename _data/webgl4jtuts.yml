@@ -11,8 +11,8 @@
         exists: true
 
       - text: 1.2. WebGL Context
-        href: #
-        exists: false
+        href: /webgl4j-tutorial-series/webgl-context/
+        exists: true
 
       - text: 1.3. Fullscreen mode
         href: #
