@@ -16,9 +16,9 @@ To get the code in the tutorials working, there needs a few changes to be done, 
 
 Previously there is a class called as `GLContext` which we used to create a context from current. This is now gone since the context is managed by GLFW in the native code. The statement is now replaced with the following statement.
 
-{% highlight java %}
+~~~java
 GL.createCapabilities();
-{% endhighlight %}
+~~~
 
 This is the new one, and I think this is more aptly named. Of course there is now method to set the active capabilities without recreating the context capabilities when context switching, I'll explain it in the tutorials when updated.
 
@@ -26,9 +26,9 @@ This is the new one, and I think this is more aptly named. Of course there is no
 
 The callback classes are now renamed to be more friendly with the Java conventions. For example the `GLFWkeyfun` is now changed into `GLFWKeyCallback` which I think is more meaningful. And the static functions with the same name as the callbacks in the `GLFW` class are now removed and are replaced with a create method.
 
-{% highlight java %}
+~~~java
 keyCallback = GLFWKeyCallback.create(this::myKeyCallback);
-{% endhighlight %}
+~~~
 
 Fortunately, the function signature is not changed, and that remains the same even now.
 

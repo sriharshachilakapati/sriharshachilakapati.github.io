@@ -11,7 +11,7 @@ Hello everyone and welcome back to my LWJGL Tutorial Series. Last time, we learn
 
 Till now, in the previous tutorials, we are using two separate VBOs to store the position and color of the vertices of our triangle. This is the piece of code that we have used in `Tutorial2` of the series. Let's have a small recap of what we have done.
 
-{% highlight java %}
+~~~java
 // The vertex positions
 float[] vertices = new float[]
 {
@@ -27,7 +27,7 @@ float[] colors = new float[]
     0, 1, 0, 1,
     0, 0, 1, 1
 };
-{% endhighlight %}
+~~~
 
 The downside of this is, we are required to create two separate VBOs to store this data. Fortunately, OpenGL allows us to specify all this data in a single VBO and this practice is called as **Interleaving** and such VBOs are called as **Interleaved Buffer Objects**.
 
@@ -60,7 +60,7 @@ As you can see, two VBOs for two components. Now, we are going to use one VBO fo
 
 As you can see, there is really no much difference, but there is some difference. First, we are getting work done with only one VBO, second, we are grouping the position and color components, even when specifying the vertices. So instead of two separate float arrays as we have done previously, we will only be using one large float array. The float array that specifies the vertices will now look like this.
 
-{% highlight java %}
+~~~java
 float[] vertices = new float[]
 {
     // x,    y,     r, g, b, a
@@ -68,7 +68,7 @@ float[] vertices = new float[]
     -0.8f, -0.8f,   0, 1, 0, 1,
     +0.8f, -0.8f,   0, 0, 1, 1
 };
-{% endhighlight %}
+~~~
 
 Now it looks simple and also short. It is also easily readable. Now comes the real issue, telling OpenGL on how to use this data, we have to tell it what is a position component and what is a color component. And to do that, you have to understand two new terms, **stride**, and **offset**.
 
@@ -86,7 +86,7 @@ Now let's define what a **stride** is, and what an **offset** is. Stride, in sim
 
 The **offset** in the other hand, is the number of bytes to skip from the start of the vertex to the start of the first float in that component. So in our example of the triangle, the offset to position will be \\( 0 \\) since it starts at location \\( 0 \\) (Programmers count by zero) and coming to the offset of the color, since it starts at index \\( 2 \\), it will be \\( 2 \times \mbox{floatSize} = 2 \times 4 = 8\; \mbox{bytes} \\). I think you now understand what stride and offsets are, so now it's time to jump into the code.
 
-{% highlight java %}
+~~~java
 // The size of float, in bytes (will be 4)
 final int sizeOfFloat = Float.SIZE / Byte.SIZE;
 
@@ -104,7 +104,7 @@ final long offsetColor    = 2 * sizeOfFloat;
 // Setup pointers using 'stride' and 'offset' we calculated above
 glVertexAttribPointer(0, 2, GL_FLOAT, false, stride, offsetPosition);
 glVertexAttribPointer(1, 4, GL_FLOAT, false, stride, offsetColor);
-{% endhighlight %}
+~~~
 
 Previously, since we did not interleave our buffers, we passed \\( 0 \\) to both stride and offset parameters of `glVertexAttribPointer` function so OpenGL assumed that the floats are tightly packed. Now that we have interleaving, we specified the calculated values instead of zeroes. Now if you run it, you will see the same old boring colored triangle on the screen.
 

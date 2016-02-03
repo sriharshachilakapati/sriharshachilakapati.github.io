@@ -16,33 +16,33 @@ The code of this tutorial continues from the previous tutorial, so start by copy
 
 That is how we rendered our triangle onto the screen. The coloring process is also the same. We will create one more VBO to store the color data and point it to the next location in the shader. The difference, lies in the number of components and how we handle them in the shaders.
 
-{% highlight java %}
+~~~java
 float[] colors = new float[]
 {
     1, 0, 0, 1,  // Red color, for the first vertex
     0, 1, 0, 1,  // Green color, for the second vertex
     0, 0, 1, 1   // Blue color, for the third vertex
 };
-{% endhighlight %}
+~~~
 
 We specify the colors as four component float vectors in the form of \\(r, g, b\\) and \\(a\\) respectively. The values for each component varies from \\(0.0f\\) to \\(1.0f\\) where the value of \\(0\\) specifies that component is empty and the value of \\(1\\) specifies that the component is full.
 
 Then we create the VBO for the colors and point it towards the second location in the shader (The first location is used for vertices). From there, all the magic happens in the shaders.
 
-{% highlight java %}
+~~~java
 vboColID = glGenBuffers();
 glBindBuffer(GL_ARRAY_BUFFER, vboColID);
 glBufferData(GL_ARRAY_BUFFER, colorsBuffer, GL_STATIC_DRAW);
 
 glVertexAttribPointer(1, 4, GL_FLOAT, false, 0, 0);
 glEnableVertexAttribArray(1);
-{% endhighlight %}
+~~~
 
 Our work in Java code is done, assuming that you have also wrote the code to dispose the color VBO yourself. We now have to modify our shaders. Previously, our vertex and fragment shaders have no direct relation, because we produced the color of the triangle directly in the fragment shader.
 
 In GLSL, it is not possible to read the color input in the fragment shader directly. We have to read the color in the vertex shader, and pass it on to the fragment shader. This is our new vertex shader.
 
-{% highlight glsl %}
+~~~glsl
 #version 330 core
 
 layout(location = 0) in vec2 position;
@@ -55,11 +55,11 @@ void main()
     vColor = color;
     gl_Position = vec4(position, 0.0, 1.0);
 }
-{% endhighlight %}
+~~~
 
 As I said previously, the `color` is a four dimensional floating point vector, which we are reading from the location \\(1\\). You can see that we declared an output variable called as `vColor`. We made it the output variable because it is the output of the vertex shader, and the input of the fragment shader. We simply assign the `color` to the output, thus passing the value to the fragment shader.
 
-{% highlight glsl %}
+~~~glsl
 #version 330 core
 
 in vec4 vColor;
@@ -69,7 +69,7 @@ void main()
 {
     fragColor = vColor;
 }
-{% endhighlight %}
+~~~
 
 As you can see, we declared `vColor` as input variable in the fragment shader, whereas it was an output variable in the vertex shader. The fragment shader is not complex too, we just pass it on again as the fragment color. And now if everything went correct, you can run the program and the output should be similar to this.
 
@@ -79,7 +79,7 @@ As you can see, we declared `vColor` as input variable in the fragment shader, w
 
 There we go, we have created a cool looking colored triangle in this tutorial. In the next tutorial, we will be learning how to use EBOs (Element Buffer Objects) and do indexed rendering.
 
-##Source Code
+## Source Code
 
 All the source code for this tutorial is present on my [GitHub repository](https://github.com/sriharshachilakapati/LWJGL-Tutorial-Series/tree/c6c5ebb18449efcd89e9b70baa45a49e7cc196b1/src/com/shc/tutorials/lwjgl/tutorial2) here. Individual links to the files are given in the list below.
 

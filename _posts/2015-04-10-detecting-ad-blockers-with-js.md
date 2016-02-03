@@ -8,18 +8,18 @@ AdBlockers are browser plugins that block the ads from displaying on the web pag
 
 Since these AdBlockers are implemented as browser extensions, there is no way that you can block them and you should not do so. At lease, I would like to show them a small message requesting them to disable their ad blocker on my site. This is possible to some extent, and this is how you can implement it into your site using JavaScript and jQuery.
 
-##The JavaScript
+## The JavaScript
 
 Without requiring you to read up long paragraphs, I show you the JavaScript code immediately.
 
-{% highlight js %}
-$(document).ready(function()
+~~~js
+$(document).ready(function ()
 {
     // Run the check after 2 seconds giving the ads some time to load
-    setTimeout(function()
+    setTimeout(function ()
     {
         // Now check each ad container if it is blocked
-        $('.ad_container').each(function()
+        $('.ad_container').each(function ()
         {
             var ad = this;
 
@@ -30,7 +30,7 @@ $(document).ready(function()
         });
     }, 2000);
 });
-{% endhighlight %}
+~~~
 
 In the above code, the `ad_container` is a class that you will use on the `<div>` element that wraps up the code for displaying your ads. The `adblocker` is the ID that is given to the `<img>` that shows the image requesting the user to disable their ad blocker on your site. Don't forget to hide the image initially using CSS.
 

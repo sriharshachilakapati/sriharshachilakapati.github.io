@@ -24,10 +24,7 @@ As you can see, it shows all the main sections, and opens the section that the c
 
 That data file is rendered using a recursively included HTML include file, which I use to replace the missing functions in Liquid. That YAML data file looks like this snippet (Most code omitted for brevity).
 
-{% comment %}
-```yaml
-{% endcomment %}
-{% highlight yaml %}
+~~~yaml
 - text: 'Home'
   href: '/lwjgl-tutorial-series/'
 
@@ -46,29 +43,18 @@ That data file is rendered using a recursively included HTML include file, which
       - text: '2.1. World of Shaders'
         href: '/lwjgl-tutorial-series/world-of-shaders/'
         [...]
-{% endhighlight %}
-{% comment %}
-```
-{% endcomment %}
+~~~
 
 This makes them much easier to maintain. The magic is then done in a recursively included HTML file that I use as a function. This recursively iterates through the data file, and generating the contents section. It is done in an include file called as `tutorial-contents.html` residing in the `_includes` directory of my site. Since it's a bit long, I'd simply give a link to GitHub source [here](https://github.com/sriharshachilakapati/sriharshachilakapati.github.io/blob/master/_includes/tutorial-contents.html). And I can then use it in the layout like this:
 
-{% comment %}
-```html
-{% endcomment %}
-{% highlight html %}
-{% raw %}
+~~~html
 <div class="row toc">
     <h3>Contents</h3>
     <ul class="nav navbar-pills navbar-stacked">
-        {% include tutorial-contents.html items=site.data.lwjgltuts %}
+        {% raw %}{% include tutorial-contents.html items=site.data.lwjgltuts %}{% endraw %}
     </ul>
 </div>
-{% endraw %}
-{% endhighlight %}
-{% comment %}
-```
-{% endcomment %}
+~~~
 
 I can also put a parameter `exists: false` in the YAML of the data file, and have the link generated in red color, indicating that the tutorial is planned but not yet written. You can see an example of that in the [WebGL4J Tutorial Series]({{ site.url }}/webgl4j-tutorial-series/) page.
 
@@ -76,17 +62,11 @@ I can also put a parameter `exists: false` in the YAML of the data file, and hav
 
 I can now write new tutorials for this just by copying the layout, and changing the data file in the TOC. To get the sub-sections to be rendered, I add a new parameter called as `section` to the YAML front matter of the markdown file.
 
-{% comment %}
-```yaml
-{% endcomment %}
-{% highlight yaml %}
+~~~yaml
 ---
 section: 1
 ---
-{% endhighlight %}
-{% comment %}
-```
-{% endcomment %}
+~~~
 
 When this is added along with other parameters, the include file (the magic widget as I call it) will open the section 1 in the contents. I have not added opening of sub-sections as I just do not need it, but it should be easy enough to do that when I require it.
 
