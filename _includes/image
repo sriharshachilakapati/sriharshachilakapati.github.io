@@ -1,0 +1,16 @@
+{% comment %}
+The format is as follows.
+
+{% include image href="path/to/image" alt="description-text" %}
+
+Doesn't support adding width and height though..
+{% endcomment %}
+
+<div class="text-center">
+    <div style="border: 1px solid #cecece; display: inline-block; padding: 0; margin: 25px;">
+        <img alt="" style="margin: 0" src="{{ include.href }}"/>
+        <div style="background: #eeeeee; padding: 10px;">
+            {{ include.alt }}
+        </div>
+    </div>
+</div>
