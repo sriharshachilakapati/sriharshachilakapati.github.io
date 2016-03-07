@@ -4,6 +4,18 @@
     ul.navbar-nav {
         float: right;
     }
+
+    .nav li > a
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.navbar-brand
+{
+    font-weight: 700;
+    padding-top: 20px;
 }
 
 nav.navbar, nav.navbar .container, ul .dropdown-menu {
@@ -25,7 +37,7 @@ nav.navbar, nav.navbar .container, ul .dropdown-menu {
 }
 
 ul.dropdown-menu > li {
-    padding: 0px;
+    padding: 0;
 }
 
 ul.dropdown-menu > li > a {
@@ -39,15 +51,11 @@ ul.dropdown-menu > li > a {
     padding-bottom: 5px;
 }
 
-nav .container {
-    padding: 10px;
-}
-
 .navbar-brand {
     color: #ecf0f1 !important;
 }
 
-.nav>li>a:hover, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+.nav>li>a:hover, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .navbar-brand:hover {
     background-color: #dfdfdf;
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -127,4 +135,11 @@ li {
 
 .nav-pills li {
     margin: 0px !important;
+}
+
+.footer
+{
+    padding-top: 20px;
+    color: #ecf0f1;
+    background: #3498db;
 }

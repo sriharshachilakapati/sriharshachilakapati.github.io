@@ -1,0 +1,71 @@
+h1, h2, h3, h4, h5, h6
+{
+    color: #16a085;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    text-align: left;
+}
+
+p
+{
+    padding-bottom: 10px;
+}
+
+body
+{
+    background: #FCFCFC;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    line-height: 1.6em;
+}
+
+b
+{
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-top: 2px solid #2980b9;
+    border-bottom: 4px solid #2980b9;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+th {
+    background: #ecf0f1;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+a {
+    color: #2980b9;
+}
+
+a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.note
+{
+    background: #E3FFE3;
+    padding: 20px;
+    border-top: 5px solid #27ae60;
+    border-bottom: 2px solid #27ae60;
+    font-size: 115%;
+    line-height: 1.4em;
+}

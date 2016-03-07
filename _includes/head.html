@@ -9,7 +9,7 @@
     <meta name="author" content="Sri Harsha Chilakapati">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 50 }}{% endif %}">
     <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 	<!-- MathJax configuration -->
 	<script type="text/x-mathjax-config">
@@ -21,11 +21,10 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <link rel="stylesheet" href="{{site.url}}/css/main.css">
-    <link rel="stylesheet" href="{{site.url}}/css/github.css">
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
