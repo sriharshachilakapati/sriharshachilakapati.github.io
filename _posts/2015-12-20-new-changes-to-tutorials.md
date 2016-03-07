@@ -72,7 +72,7 @@ When this is added along with other parameters, the include file (the magic widg
 
 ## Future plans regarding tutorials
 
-I think you might have noticed, I have started a new tutorial series called as [WebGL4J Tutorial Series]({{ site.url }}//webgl4j-tutorial-series/) which are tutorials for my WebGL4J library. Since now there is a clashing with OpenGL tutorials in WebGL4J and LWJGL3 (Both share the same design), writing tutorials for both of them in a full detail manner will provide duplication of tutorials.
+I think you might have noticed, I have started a new tutorial series called as [WebGL4J Tutorial Series]({{ site.url }}/webgl4j-tutorial-series/) which are tutorials for my WebGL4J library. Since now there is a clashing with OpenGL tutorials in WebGL4J and LWJGL3 (Both share the same design), writing tutorials for both of them in a full detail manner will provide duplication of tutorials.
 
 OpenGL is same whether it is WebGL or Desktop GL. So I would like to turn them away from OpenGL, and I will be showing how to make an example OpenGL application, one with WebGL4J and one with LWJGL3. And then, I might be starting a new OpenGL Tutorial Series. I'll also have a tutorial series on [SilenceEngine](http://silenceengine.goharsha.com) in the future.
 
