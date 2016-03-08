@@ -9,7 +9,7 @@ Doesn't support adding width and height though..
 <div class="text-center">
     <div style="border: 1px solid #cecece; display: inline-block; padding: 0; margin: 25px;">
         <img alt="" style="margin: 0" src="{{ include.href }}"/>
-        <div style="background: #eeeeee; padding: 10px;">
+        <div style="background: #eeeeee; padding: 10px; border-top: 1px solid #cecece;">
             {{ include.alt }}
         </div>
     </div>

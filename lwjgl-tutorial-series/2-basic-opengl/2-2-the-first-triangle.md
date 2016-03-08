@@ -191,8 +191,6 @@ Then we are creating a `FloatBuffer` which wraps the vertices array and flip it.
 
 Now comes the most important function which needs some explanation, it is the `glVertexAttribPointer` function. Here is the documentation of that function.
 
-<div class="documentation" markdown='1'>
-
 | Parameter    | Description                                                     |
 |:------------:|:----------------------------------------------------------------|
 | `index`      | This is the location where the input from the buffer object goes|
@@ -201,8 +199,6 @@ Now comes the most important function which needs some explanation, it is the `g
 | `normalized` | Whether the specified values should be normalized               |
 | `stride`     | Specifies the byte offset between components in a tuple         |
 | `offset`     | Specifies the offset of the first component                     |
-
-</div>
 
 So with the call to `glVertexAttribPointer(0, 2, GL_FLOAT, false, 0, 0)` we are saying that we need to set the index location in the shader is 0, we have two components per vertex, their type is float, we don't want to normalize them, and start at the first of the array. I will explain these stride and offset in a later tutorial. This completes the loading part.
 

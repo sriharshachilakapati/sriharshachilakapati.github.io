@@ -64,3 +64,8 @@ html, body {
 .activeli {
     background-color: #ddd;
 }
+
+.btn {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}

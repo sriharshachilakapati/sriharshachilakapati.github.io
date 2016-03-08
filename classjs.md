@@ -6,8 +6,8 @@ permalink: /classjs/
 
 ClassJS is a library written to allow us to write class-based applications in JavaScript, which only supports prototype based object oriented code by default. A word of warning is that this project is only developed out of enthusiasm and doesn't include any support. Writing classes is fun and this library facilitates you to write that. I wrote this library to port some of my Java applications to JavaScript. Currently, ClassJS is in it's second beta version 0.0.2
 
-<div class="text-center" markdown='1'>
-<a href="{{ site.url }}/downloads/ClassJS-Beta2.zip" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download"></span> Download ClassJS 0.0.2</a>
+<div class="text-center">
+{% include download url='/downloads/ClassJS-Beta2.zip' text='Download ClassJS 0.0.2' %}
 </div>
 
 ## Features

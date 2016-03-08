@@ -63,7 +63,7 @@ glfwTerminate();
 
 That’s simply it. We call this function in the end of the game, after we destroy the window we are going to create. Now we can focus on creating the window.
 
-##Creating a Window
+## Creating a Window
 
 We need a window to render our contents to the screen and the player to be able to see them. To create our window, we have the `glfwCreateWindow()` function in GLFW. It’s signature or prototype in LWJGL is the following.
 

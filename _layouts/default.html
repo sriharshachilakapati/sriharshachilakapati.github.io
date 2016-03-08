@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 {% include head.html %}
 <body>
     {% include google-analytics.html %}
@@ -10,7 +10,7 @@
             <div class="row">
                 <div id="sidebar" class="sidebar col-xs-12 col-sm-12 col-lg-2">
                     <img id="adblocker" src="/assets/images/adblocker.png" style="display: none; height: 100%;"></img>
-                
+
                     <div class="ad_container">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- Front page - 1 (goharsha.com) -->
@@ -24,24 +24,21 @@
                         </script>
                     </div>
                 </div>
-          
+
                 <div class="col-xs-12 col-sm-12 col-lg-10">
                     {{ content }}
                 </div>
             </div>
         </div>
-        
+
         <div class="push"></div>
     </div>
 
     {% include footer.html %}
-    
-    <!-- Disqus Comment JS -->
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'goharsha'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
+    <script type="text/javascript">
+    var disqus_shortname = 'goharsha';
+
     (function () {
     var s = document.createElement('script'); s.async = true;
     s.type = 'text/javascript';
@@ -49,8 +46,7 @@
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    
-    <!-- AdBlocker Test -->
+
     <script>
     $(document).ready(function()
     {
@@ -59,7 +55,7 @@
             $('.ad_container').each(function()
             {
                 var ad = this;
-                
+
                 if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0)
                     $('#adblocker').css('display', 'block');
             });

@@ -8,12 +8,8 @@ I have recently made enhancements to the tutorial system in this site, which all
 
 ## The Contents Pane
 
-<div class="pull-right" style="background: #f5f5f5; border: 1px solid #eee; margin-left: 15px !important; padding-left: 0px !important;" markdown='1'>
-![The contents section in LWJGL Tutorial Series]({{ site.url }}/assets/images/changes-to-tutorials/lwjgl-tuts_contents.png)
-
-<div class="text-center small" style="padding: 0px !important; margin: 0px !important;" markdown='1'>
-_A screenshot of contents pane_
-</div>
+<div class="pull-right">
+{% include image href="/assets/images/changes-to-tutorials/lwjgl-tuts_contents.png" alt="A screenshot of contents pane" %}
 </div>
 
 The contents pane existed in the tutorials for a long time, so what is changed? I'm now using YAML data that Jekyll offers to write the contents, which gets copied into every post with the help of a recursively included html template file.
