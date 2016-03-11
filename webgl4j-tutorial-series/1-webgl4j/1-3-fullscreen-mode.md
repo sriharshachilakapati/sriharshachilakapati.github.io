@@ -1,6 +1,6 @@
 ---
 title: Fullscreen Mode
-layout: webl4jtutorial
+layout: webgl4jtutorial
 permalink: /webgl4j-tutorial-series/fullscreen-mode/
 section: 1
 ---
