@@ -29,7 +29,7 @@ With these three methods, you can use the fullscreen API in all the major browse
 
 ~~~java
 // Store the context upon creation.
-WebGLContext ctx = WebGL10.createContext();
+WebGLContext ctx = WebGL10.createContext(canvas);
 
 // Request the browser to make it fullscreen.
 boolean success = ctx.requestFullscreen();
