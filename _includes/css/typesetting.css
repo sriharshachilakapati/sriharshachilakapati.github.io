@@ -37,11 +37,13 @@ table {
     border-bottom: 4px solid #2980b9;
     margin-top: 20px;
     margin-bottom: 25px;
+    max-width: 100%;
 }
 
 th {
     background: #ecf0f1;
     padding: 10px;
+    text-align: center;
 }
 
 td {
