@@ -69,3 +69,8 @@ html, body {
     margin-top: 15px;
     margin-bottom: 20px;
 }
+
+.share-buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

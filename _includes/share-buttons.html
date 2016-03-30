@@ -1,0 +1,52 @@
+<div class="share-buttons">
+    <b>Share on:</b>
+
+    <!--the Facebook base
+    https://www.facebook.com/dialog/share? -->
+
+    <a href="https://www.facebook.com/dialog/share?app_id=488995754626149&display=popup&href=http://goharsha.com{{ include.url }}&redirect_uri=http://goharsha.com{{ include.url }}">
+        <kbd>
+            <!-- use the facebook logo for the link -->
+            <img
+                alt="..."
+                class="footer-icon"
+                width="25px"
+                src="{{ site.baseurl }}/assets/social-icons/fbicon.png">
+            </img>
+
+            Facebook
+        </kbd>
+    </a>
+<!--the LinkedIn base url
+http://www.linkedin.com/shareArticle?mini=true -->
+
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://goharsha.com{{ include.url }}&title={{ include.title }}&source={{ include.title }}">
+    <kbd>
+        <!-- use the linkedin logo for the link -->
+        <img alt="..."
+        class="footer-icon"
+        width="34px"
+        src="{{ site.baseurl }}/assets/social-icons/lnicon.png">
+    </img>
+
+    Linkedin
+</kbd>
+</a>
+
+<!--the Google+ link url;
+base = https://plus.google.com/share? -->
+
+<a href="https://plus.google.com/share?url=http://goharsha.com{{ include.url }}&hl=en-US" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+    <kbd>
+        <!-- use the google+ logo for the link -->
+        <img
+        alt="..."
+        class="footer-icon"
+        width="28px"
+        src="{{ site.baseurl }}/assets/social-icons/g+icon.png">
+    </img>
+
+    Google+
+</kbd>
+</a>
+</div>

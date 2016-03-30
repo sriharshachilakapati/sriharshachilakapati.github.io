@@ -24,5 +24,9 @@ layout: default
         {{ content }}
     </article>
 
+    <div class="text-center">
+        {% include share-buttons.html url=page.url title=page.title %}
+    </div>
+
     {% include comments.html %}
 </div>

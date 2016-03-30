@@ -29,6 +29,10 @@ description: A Blog where the posts are written by myself!
     </div>
 
     <div class="row post-blog-entry">
+        <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
+            {% include share-buttons.html url=post.url title=post.title %}
+        </div>
+
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <p class="text-right">
                 <a href="{{ post.url }}">

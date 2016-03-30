@@ -5,9 +5,9 @@ layout: default
 
   <header class="post-header">
     <div class="row">
-        <h1 class="post-title">{{ page.title }}</h1>
-
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 class="post-title">{{ page.title }}</h1>
+
             {% for tag in page.tags %}
                 <kbd>{{ tag }}</kbd>
             {% endfor %}
@@ -26,6 +26,10 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+
+  <div class="text-center">
+      {% include share-buttons.html url=page.url title=page.title %}
+  </div>
 
   {% include comments.html %}
 </div>
