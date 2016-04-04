@@ -30,7 +30,7 @@ html, body {
 .footer, .push
 {
     clear: both;
-    height: 4em;
+    min-height: 4em;
 }
 
 .comments
