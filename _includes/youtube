@@ -6,6 +6,8 @@ A fun jekyll way of embedding youtube videos. Usage is like this.
 Includes a youtube video in a responsive manner.
 {% endcomment %}
 
-<div class='video-embed-container text-center'>
-    <iframe src='http://www.youtube.com/embed/{{include.id}}' frameborder='0' allowfullscreen></iframe>
+<div class='youtube'>
+    <div class='video-embed-container text-center'>
+        <iframe src='http://www.youtube.com/embed/{{include.id}}' frameborder='0' allowfullscreen></iframe>
+    </div>
 </div>
