@@ -4,10 +4,10 @@ layout:    default
 permalink: /
 ---
 
-{: class="pull-right" style="width: 300px; margin: 10px; padding: 0;" }
-![Sri Harsha Chilakapati]({{ site.url }}/assets/images/home/profile.png)
-
 ## Hi There! Nice to see you here..
+
+{: class="pull-right" style="width: 300px; margin-left: 30px; padding: 0;" }
+![Sri Harsha Chilakapati]({{ site.url }}/assets/images/home/profile.jpg)
 
 The one in the image is me, Sri Harsha Chilakapati, and I'm the author of this website. Welcome to my world! In this website, you will find everything in my world, from LWJGL Tutorials to tech experiments! I love to code, and I love to talk about code.
 
