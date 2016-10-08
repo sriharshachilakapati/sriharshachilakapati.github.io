@@ -1,0 +1,107 @@
+---
+layout: default
+title: 'Tag Archive'
+comments: false
+sitemap:
+    exclude: 'yes'
+permalink: '/tags/'
+excerpt: 'GoHarsha.com Tag Archive'
+---
+
+<!-- Define the template now -->
+<div class="tag-blog">
+    <div class="row">
+        <h2>Posts tagged as <kbd><span id="tag_name">Loading</span></kbd></h2>
+    </div>
+
+    <div id="template" style="display: none;">
+        <div class="row">
+            <a href="$postUrl">
+                <h1 class="post-entry-title">$postTitle</h1>
+            </a>
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <p class="tag-blog">
+                    $tags
+                </p>
+
+                <h2><small>Posted on $date and has {% include comments-count.html identifier='$postUrl' %}</small></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+            $excerpt
+            </div>
+        </div>
+
+        <div class="row post-blog-entry">
+            <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
+                {% include share-buttons.html url='$postUrl' title='$postTitle' %}
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="text-right">
+                    <a href="$postUrl">
+                        Read More <b>&rarr;</b>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+    </div>
+</div>
+
+<script type="text/javascript" lang="javascript">
+var queryString = function () {
+    // This function is anonymous, is executed immediately and
+    // the return value is assigned to QueryString!
+    var query_string = {};
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+            query_string[pair[0]] = decodeURIComponent(pair[1]);
+            // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+            var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+            query_string[pair[0]] = arr;
+            // If third or later entry with this name
+        } else {
+            query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+    }
+    return query_string;
+}();
+
+$('#tag_name').html(queryString.name);
+
+$.getJSON('/tags.json', function(data) {
+    for (var i = 0; i < data.posts.length; i++) {
+        var post = data.posts[i];
+
+        if ($.inArray(queryString.name, post.tags) == -1)
+            continue;
+
+        var tags = "";
+
+        for (var j = 0; j < post.tags.length; j++) {
+            var tag = post.tags[j];
+            var tagTemplate = '<a href="/tags/?name=$tag"><kbd>$tag</kbd></a>';
+            tags += tagTemplate.replace(/\$tag/g, tag);
+        }
+
+        var template = $('#template').html()
+            .replace(/\$postUrl/g, post.url)
+            .replace(/\$postTitle/g, post.title)
+            .replace(/\$date/g, post.date)
+            .replace(/\$tags/g, tags)
+            .replace(/\$excerpt/g, post.excerpt);
+
+        $('#content').html($('#content').html() + template);
+    }
+});
+</script>
