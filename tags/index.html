@@ -6,6 +6,7 @@ sitemap:
     exclude: 'yes'
 permalink: '/tags/'
 excerpt: 'GoHarsha.com Tag Archive'
+description: 'GoHarsha.com Tag Archive'
 ---
 
 <!-- Define the template now -->
@@ -15,38 +16,7 @@ excerpt: 'GoHarsha.com Tag Archive'
     </div>
 
     <div id="template" style="display: none;">
-        <div class="row">
-            <a href="$postUrl">
-                <h1 class="post-entry-title">$postTitle</h1>
-            </a>
-            <div class="col-lg-12 col-sm-12 col-xs-12">
-                <p class="tag-blog">
-                    $tags
-                </p>
-
-                <h2><small>Posted on $date and has {% include comments-count.html identifier='$postUrl' %}</small></h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-lg-12">
-            $excerpt
-            </div>
-        </div>
-
-        <div class="row post-blog-entry">
-            <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
-                {% include share-buttons.html url='$postUrl' title='$postTitle' %}
-            </div>
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p class="text-right">
-                    <a href="$postUrl">
-                        Read More <b>&rarr;</b>
-                    </a>
-                </p>
-            </div>
-        </div>
+        {% include blog-entry.html postUrl='$postUrl' postTitle='$postTitle' postDate='$date' postExcerpt='$excerpt' tags='$tags' %}
     </div>
 
     <div id="content">
@@ -56,7 +26,7 @@ excerpt: 'GoHarsha.com Tag Archive'
 <script type="text/javascript" lang="javascript">
 var queryString = function () {
     // This function is anonymous, is executed immediately and
-    // the return value is assigned to QueryString!
+    // the return value is assigned to queryString!
     var query_string = {};
     var query = window.location.search.substring(1);
     var vars = query.split("&");
