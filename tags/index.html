@@ -11,7 +11,7 @@ description: 'GoHarsha.com Tag Archive'
 
 <!-- Define the template now -->
 <div class="tag-blog">
-    <div class="row">
+    <div class="row" id="tagHeader">
         <h2>Posts tagged as <kbd><span id="tag_name">Loading</span></kbd></h2>
     </div>
 
@@ -20,6 +20,12 @@ description: 'GoHarsha.com Tag Archive'
     </div>
 
     <div id="content">
+    </div>
+
+    <div class="row">
+        <h2>Tag Cloud</h2>
+        <div id="tagCloud" class="col-xs-12">
+        </div>
     </div>
 </div>
 
@@ -49,7 +55,12 @@ var queryString = function () {
 
 $('#tag_name').html(queryString.name);
 
+if (queryString.name == undefined)
+    $('#tagHeader').css('display', 'none');
+
 $.getJSON('/tags.json', function(data) {
+    var tagTemplate = '<a href="/tags/?name=$tag"><kbd>$tag</kbd></a>';
+
     for (var i = 0; i < data.posts.length; i++) {
         var post = data.posts[i];
 
@@ -60,7 +71,6 @@ $.getJSON('/tags.json', function(data) {
 
         for (var j = 0; j < post.tags.length; j++) {
             var tag = post.tags[j];
-            var tagTemplate = '<a href="/tags/?name=$tag"><kbd>$tag</kbd></a>';
             tags += tagTemplate.replace(/\$tag/g, tag);
         }
 
@@ -72,6 +82,11 @@ $.getJSON('/tags.json', function(data) {
             .replace(/\$excerpt/g, post.excerpt);
 
         $('#content').html($('#content').html() + template);
+    }
+
+    for (var i = 0; i < data.tags.length; i++) {
+        var tag = data.tags[i];
+        $('#tagCloud').html($('#tagCloud').html() + tagTemplate.replace(/\$tag/g, tag));
     }
 });
 </script>

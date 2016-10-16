@@ -11,6 +11,8 @@ kbd
     background: #eee;
     padding: 5px;
     margin: 2px;
+    display: inline-block;
+    text-align: left;
 }
 
 kbd:hover

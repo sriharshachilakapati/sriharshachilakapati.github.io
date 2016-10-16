@@ -16,5 +16,11 @@
             ]
         }{% if forloop.last == false %},{% endif %}
         {% endfor %}
+    ],
+
+    "tags": [
+        {% for tag in (site.tags | sort) %}
+            "{{ tag[0] }}"{% if forloop.last == false %},{% endif %}
+        {% endfor %}
     ]
 }

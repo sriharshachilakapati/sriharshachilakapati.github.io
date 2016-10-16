@@ -10,3 +10,4 @@
 {% include css/typesetting.css %}
 {% include css/mathjax.css %}
 {% include css/youtube.css %}
+{% include css/tags.css %}
