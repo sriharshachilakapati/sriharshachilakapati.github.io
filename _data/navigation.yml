@@ -12,3 +12,6 @@
 
 - title: "Blog"
   href: "blog"
+
+- title: "Tag Cloud"
+  href: "tags"
