@@ -1,7 +1,8 @@
 ---
 title: Sharing Buttons, Jekyll How-to
 layout: post
-tags: ["Sharing Buttons", "Jekyll", "How-to"]
+keywords: ["Sharing Buttons", "Jekyll", "How-to"]
+tags: ["Jekyll", "Website", "Tutorial"]
 ---
 
 This post is to explain how I added the sharing buttons to this Jekyll website. I was trying to do this for quite some time before, but all I got into was trouble, as I'm not a web developer basically and don't know how these buttons work. After a long time, today I managed to get sharing buttons to be working, and here is how. I will be detailing the process for each social media platform individually.

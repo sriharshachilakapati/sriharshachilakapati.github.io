@@ -1,7 +1,8 @@
 ---
 layout: post
 title: SilenceEngine - Thoughts on Shaders
-tags: SilenceEngine Improvements Shaders
+keywords: ["SilenceEngine", "Improvements", "Shaders"]
+tags: ["SilenceEngine", "GLSL", "GLSL ES"]
 ---
 
 Recently I've been thinking on how to make SilenceEngine more awesome by writing a new API and as well as multiple backends, and today I'm presenting you the ideas I'm having regarding the shaders, an important part in programming graphics.

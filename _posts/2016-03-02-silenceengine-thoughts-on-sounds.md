@@ -1,7 +1,8 @@
 ---
 title: SilenceEngine - Thoughts on Sounds
 layout: post
-tags: SilenceEngine Improvements Audio SoundEngine
+keywords: ["SilenceEngine", "Improvements", "Audio", "SoundEngine"]
+tags: ["SilenceEngine", "Audio"]
 ---
 
 Previously I have written my thoughts on the core and the graphics API of the upcoming rewrite of SilenceEngine, and now in this post, I'll talk about my thoughts on the audio API. As an OpenAL implementer (I'm implementing OpenAL for the GWT, which SilenceEngine uses in it's HTML5 build) I can say that OpenAL by itself is pretty simple and clear enough from the specification, and has a lot of features that are more than enough for 99% of the games. But still, it's static API might be confusing to newbies, so we provide an object oriented wrapper for the API.

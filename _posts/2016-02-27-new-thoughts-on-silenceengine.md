@@ -1,7 +1,8 @@
 ---
 title: New thoughts on SilenceEngine
 layout: post
-tags: SilenceEngine Improvements
+keywords: [SilenceEngine, Improvements]
+tags: ['SilenceEngine']
 ---
 
 The aim of this post is to put my new thoughts on the improvement of SilenceEngine, a 2D/3D game engine. Initially SilenceEngine has been written with LWJGL3 in mind, and I'm happy to say that it is the first game engine that is using LWJGL3 for the low level bindings, like GLFW, OpenGL, OpenAL, JEmalloc, STB etc., But due to that, SilenceEngine has been limited to a single platform, that is the desktop.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Delaying LWJGL Tutorial Series
-tags: [lwjgl3, tutorials]
+tags: [LWJGL3, Tutorial]
 ---
 
 As you might have been noticed, there are no updates to the LWJGL Tutorial series, and I now want to further delay the writing of tutorials regarding LWJGL3. The reason, is that initially I was excited about the new version and started writing the tutorial series, but now it happened to change a lot from the alpha builds in the API, making all my tutorials obsolete (they're still good on OpenGL part though).

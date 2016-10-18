@@ -1,7 +1,8 @@
 ---
 title: New changes to the Tutorial system
 layout: post
-tags: ['tutorial system', jekyll, 'data driven', 'update']
+keywords: ['tutorial system', jekyll, 'data driven', 'update']
+tags: ["Jekyll", "Jekyll Data", "Tutorial", "Website"]
 ---
 
 I have recently made enhancements to the tutorial system in this site, which allows me to write tutorials easily without worrying about the generation of the contents HTML. There are three main things that this post elaborates to you &mdash; the contents pane, the way new tutorials will be written, and the future plans regarding the contents.

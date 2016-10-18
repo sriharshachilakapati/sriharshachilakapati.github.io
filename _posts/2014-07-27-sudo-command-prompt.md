@@ -1,7 +1,8 @@
 ---
 title: Sudo for Command Prompt
 layout: post
-tags: sudo command prompt linux mac unix administrator
+keywords: ["sudo", "command", "prompt", "linux", "mac", "unix", "administrator"]
+tags: ["Windows", "Unix/Linux", "Utility"]
 excerpt: The command `sudo` is most common among linux and mac users. It allows people to launch any application with administrator privileges. This command will come handy for power users who wants to launch applications with those privileges. I find myself using that command atleast ten times a day on linux and I miss it on windows. So I created this small utility application using C# that allows for that sort of behavior in windows.
 ---
 

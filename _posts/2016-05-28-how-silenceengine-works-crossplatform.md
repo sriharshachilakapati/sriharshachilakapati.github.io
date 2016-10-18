@@ -1,6 +1,6 @@
 ---
 title: How SilenceEngine works Cross Platform
-tags: ['SilenceEngine', 'Cross Platform', 'Devices', 'Under the hood']
+tags: ['SilenceEngine', 'Cross Platform', 'Devices', 'Under the hood', 'Windows', 'Mac OS', 'Unix/Linux', 'Android', 'HTML5']
 layout: post
 ---
 

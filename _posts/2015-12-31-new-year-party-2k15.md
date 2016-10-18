@@ -1,7 +1,8 @@
 ---
 layout: post
 title: New year party 2K15
-tags: ['new year', party, 2k15]
+keywords: ['new year', party, 2k15]
+tags: ['New Year']
 ---
 
 First of all, I wish you a very happy and prosperous new year 2016. Since the move to GitHub pages, my workflow on this website and blog got awesome and more easier than ever, and so here is yet another post from me. This post is about how we celebrated our new year party this time in our college bus. I promise that I'll keep tech and stuff away from this post, this is for everyone. Here's a summary of our party today:

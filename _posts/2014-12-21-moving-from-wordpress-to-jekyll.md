@@ -1,7 +1,8 @@
 ---
 title: Moving From WordPress to Jekyll
 layout: post
-tags: Jekyll WordPress moving static website markdown
+keywords: ["Jekyll", "WordPress", "moving", "static", "website", "markdown"]
+tags: ["Jekyll", "WordPress", "Website"]
 ---
 
 Two days ago, I decided to make transition from WordPress to Jekyll. If you guys do not know what Jekyll is, Jekyll is a **static site generator**, it generates a complete website using only HTML and CSS by processing a variety of input formats like HTML, Markdown, Text files combined with a CSS.

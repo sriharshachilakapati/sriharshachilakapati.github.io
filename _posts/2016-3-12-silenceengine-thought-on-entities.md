@@ -1,7 +1,8 @@
 ---
 title: SilenceEngine - Thoughts on Entities
 layout: post
-tags: SilenceEngine Thoughts Improvements Entities
+keywords: ["SilenceEngine", "Thoughts", "Improvements", "Entities"]
+tags: ["SilenceEngine", "Entity"]
 ---
 
 Previously I have written about my thoughts on the SilenceEngine and how it can be improved, and covered the areas of graphics, audio and core. Now it's time to implement a new thing which is not yet implemented in the original implementation, the entities.

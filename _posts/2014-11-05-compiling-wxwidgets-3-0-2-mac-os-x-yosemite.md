@@ -1,7 +1,8 @@
 ---
 title: Compiling wxWidgets-3.0.2 on Mac OS X Yosemite
 layout: post
-tags: wxWidgets MacOS build error quick-fix webkit apple Yosemite
+keywords: ["wxWidgets", "MacOS", "build", "error", "quick-fix", "webkit", "apple", "Yosemite"]
+tags: ["MacOS", "Mac OS Yosemite", "wxWidgets", "WebKit"]
 ---
 
 Recently wxWidgets 3.0.2 has been released, and it also introduced some problems with building them on Yosemite, the latest iteration of Apple's new Operating System. If you tried to build it on Yosemite, you are supposed to get some of the errors like the following. Fortunately, I've been able to build it, so here are the steps I've took to get it working.

@@ -1,7 +1,8 @@
 ---
 title: Enable .Net Framework 3.5 on Windows 8/8.1
 layout: post
-tags: [.Net framework, Microsoft Windows]
+keywords: [".Net framework", "Microsoft Windows"]
+tags: [".Net Framework", "Windows", "Windows 8/8.1"]
 ---
 
 Recently, I've tried to run **OpenTK Examples** on my windows 8.1 pro and it asked me to install .Net Framework 3.5. I was surprised that Windows by default comes with version 4.5.1 of the framework pre-installed. After a bit of research, I found that it has to be enabled to run the apps. Here's how to do that.

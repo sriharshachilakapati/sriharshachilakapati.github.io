@@ -1,7 +1,8 @@
 ---
 title: Atom - An IDE for Jekyll blog
 layout: post
-tags: atom editor jekyll ide static website development
+keywords: ["atom", "editor", "jekyll", "ide", "static", "website", "development"]
+tags: ["Jekyll", "Atom", "Website"]
 ---
 
 Since I moved my website to Jekyll, I was looking for a good and complete editor to write my posts. I always didn't like seeing myself switching between my editor, project folder and the web browser to see how the post will be on the final page.

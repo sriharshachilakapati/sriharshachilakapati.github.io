@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Moving to GitHub Pages, while maintaining other features
-tags: [github, pages, jekyll, hosting, email, cpanel]
+keywords: ["github", "pages", "jekyll", "hosting", "email", "cpanel"]
+tags: ["Jekyll", "GitHub Pages", "Website", "E-Mail", "CPanel"]
 ---
 
 This post is a guide that explains how I recently switched to GitHub pages for hosting my website, and how I did that while still keeping access to my e-mails, my cPanel and webmail services that I have purchased at [GoDaddy.com](https://godaddy.com/). Before explaining the procedure of how I did it, I have to explain the page layout that I had been using previously. I have been hosting an SMF forum, and two websites directly from my shared hosting since the last three years, and that structure is a complete mess, as I have been a newbie in the web and server stuff.

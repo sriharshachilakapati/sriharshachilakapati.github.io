@@ -1,7 +1,7 @@
 ---
 title: Detecting Ad Blockers with JavaScript
 layout: post
-tags: [AdBlockers, JavaScript, Identification]
+tags: [AdBlocker, JavaScript, Utility]
 ---
 
 AdBlockers are browser plugins that block the ads from displaying on the web pages. While they may be useful for blocking obtrusive ads, they also prevent some non-obtrusive ads from displaying on your pages. As a blogger who generates some small amount of revenue from ads, you may want to escape from these ad blockers.

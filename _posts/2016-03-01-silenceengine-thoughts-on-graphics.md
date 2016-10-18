@@ -1,7 +1,8 @@
 ---
 title: SilenceEngine - Thoughts on Graphics
 layout: post
-tags: SilenceEngine Graphics Improvements
+keywords: ["SilenceEngine", "Graphics", "Improvements"]
+tags: ["SilenceEngine", "Graphics"]
 ---
 
 A few days before, I have written a post titled [New thoughts on SilenceEngine]({{ site.url }}/blog/new-thoughts-on-silenceengine/) explaining how I'm going to re-implement SilenceEngine as a multi backend cross platform engine, and shared my thoughts on the new up coming core architecture of the engine. In this post, I will be sharing about how the new graphics are being handled.

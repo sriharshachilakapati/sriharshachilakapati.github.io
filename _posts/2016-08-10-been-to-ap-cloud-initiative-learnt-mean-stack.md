@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Been to AP Cloud Initiative - Learnt MEAN stack
-tags: ['AP', 'cloud', 'initiative', 'MEAN', 'MongoDB', 'ExpressJS', 'AngularJS', 'NodeJS']
+tags: ['AP Cloud', 'MEAN', 'MongoDB', 'ExpressJS', 'AngularJS', 'NodeJS']
 ---
 
 The government of Andhra Pradesh has initiated the **AP Cloud Initiative** five days ago along with **Miracle Software Systems** with the mission to create 1,00,000 professionals who can make the state transform into **Digital AP** by investing ₹6,00,00,000/- (six crore rupees) for this mission, and I attended the training they are providing along with my team from our college. There were 26 teams from 26 different colleges across the state, and this was a great opportunity for all of us. Our team consisted of me along with three seniors of me in college and one of my faculty. I do thank both the government and team Miracle for this opportunity. I also thank my college for selecting me to be part of this team.

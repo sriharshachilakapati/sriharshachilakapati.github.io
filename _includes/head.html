@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Sri Harsha Chilakapati">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 50 }}{% endif %}">
-    <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
+    <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}{% if page.keywords and page.tags %}, {% endif %}{% assign keywords = page.keywords %}{% for tag in keywords %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 	<!-- MathJax configuration -->

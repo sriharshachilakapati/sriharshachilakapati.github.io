@@ -1,7 +1,8 @@
 ---
 title: Support for meta theme color
 layout: post
-tags: ["meta", "theme", "color", "chrome", "android"]
+keywords: ["meta", "theme", "color", "chrome", "android"]
+tags: ["Chrome", "Android", "CSS", "Theme"]
 ---
 
 <div class="text-center" markdown='1'>
