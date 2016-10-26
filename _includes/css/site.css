@@ -74,3 +74,34 @@ html, body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.panel {
+    border-radius: 15px;
+    background-color: #ecf0f1;
+    border: 1px solid #16a085 !important;
+}
+
+.panel li {
+    text-align: left !important;
+}
+
+.panel-heading {
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    background-color: #16a085 !important;
+    color: #fff !important;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.main-logo {
+    margin-bottom: 16px;
+}
+
+.home-links a {
+    color: #333 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
