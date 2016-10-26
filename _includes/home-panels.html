@@ -25,9 +25,9 @@ experiments! I love to code, and I love to talk about code.
         </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="panel panel-default text-center">
+        <div class="panel panel-default">
             <div class="panel-heading">StackExchange</div>
-            <div class="panel-body">
+            <div class="panel-body text-center">
                 <p>StackOverflow</p>
                 <p>
                     <a href="http://stackoverflow.com/users/1026805/sri-harsha-chilakapati">
@@ -64,7 +64,7 @@ experiments! I love to code, and I love to talk about code.
                 <ul class="nav navbar-pills navbar-stacked">
                     {% for item in site.posts | limit: 5 %}
                     <li>
-                        <a href="{{ site.url }}/{{ item.url }}">{{ item.title }}</a>
+                        <a href="{{ site.url | append: item.url }}">{{ item.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
