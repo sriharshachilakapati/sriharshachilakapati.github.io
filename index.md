@@ -1,6 +1,9 @@
 ---
 title:     Home
 layout:    default
+description: |
+    Welcome to my world! In this website, you will find everything in my world, from LWJGL tutorials to tech
+    experiments! I love to code, and I love to talk about code.
 permalink: /
 ---
 
