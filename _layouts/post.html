@@ -9,7 +9,7 @@ layout: default
             <h1 class="post-title">{{ page.title }}</h1>
 
             {% for tag in page.tags %}
-                <kbd>{{ tag }}</kbd>
+                <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
             {% endfor %}
         </div>
 
