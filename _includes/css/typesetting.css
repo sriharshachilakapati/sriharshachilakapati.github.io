@@ -70,6 +70,6 @@ a:hover, a:visited, a:link, a:active {
     padding: 20px;
     border-top: 5px solid #27ae60;
     border-bottom: 2px solid #27ae60;
-    font-size: 115%;
+    font-size: 1.2em;
     line-height: 1.4em;
 }

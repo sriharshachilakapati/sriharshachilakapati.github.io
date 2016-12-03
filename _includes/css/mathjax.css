@@ -9,7 +9,7 @@ span[id^="MathJax"]
 	border: 1px solid #ecf0f1;
     padding: 20px;
     background: #ecf0f1;
-	font-size: 120%;
+	font-size: 1.4em;
     min-width: 100% !important;
     max-width: 100% !important;
 }

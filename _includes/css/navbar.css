@@ -16,6 +16,7 @@
 {
     font-weight: 700;
     padding-top: 20px;
+    margin-left: 15px !important;
 }
 
 nav.navbar, nav.navbar .container, ul .dropdown-menu {
@@ -45,7 +46,7 @@ ul.dropdown-menu > li > a {
     color: #ecf0f1;
 
     padding: 15px;
-    font-size: 125%;
+    font-size: 1.3em;
 
     padding-top: 5px;
     padding-bottom: 5px;
