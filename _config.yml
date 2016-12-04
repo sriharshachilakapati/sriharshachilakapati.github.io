@@ -2,6 +2,10 @@
 title: GoHarsha.com
 email: hello@goharsha.com
 
+# Development mode, to enable it, use _development.yml along with _config.yml
+# jekyll serve --watch --config _config.yml,_development.yml
+development: false
+
 description: >
   GoHarsha.com showcases the Programming World of Sri Harsha Chilakapati.
   It is where he enjoys writing about programming, his experiences and his
