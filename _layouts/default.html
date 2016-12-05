@@ -13,16 +13,18 @@
                     <img id="adblocker" src="/assets/images/adblocker.png" style="display: none; height: 100%;"></img>
 
                     <div class="ad_container">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- Front page - 1 (goharsha.com) -->
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-4775129760038978"
-                             data-ad-slot="2806486240"
-                             data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        {% unless site.development %}
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- Front page - 1 (goharsha.com) -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-4775129760038978"
+                                 data-ad-slot="2806486240"
+                                 data-ad-format="auto"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        {% endunless %}
                     </div>
                 </div>
 
