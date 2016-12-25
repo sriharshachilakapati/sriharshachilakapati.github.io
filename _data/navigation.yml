@@ -7,8 +7,78 @@
       - title: "WebGL4J Tutorial Series"
         href: "webgl4j-tutorial-series"
 
-- title: "ClassJS"
-  href: "classjs"
+- title: "Games"
+  href: "#"
+  children:
+      - title: "LDSnake"
+        href: "https://goharsha.com/LDSnake/"
+        abs: true
+
+      - title: "Lost Orion"
+        href: "https://goharsha.com/Lost-Orion/"
+        abs: true
+
+      - title: "Amoebam"
+        href: "https://goharsha.com/Amoebam/"
+        abs: true
+
+      - title: "AutoInvaders"
+        href: "http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=22490"
+        abs: true
+
+      - title: "Monster Run"
+        href: "http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=22490"
+        abs: true
+
+      - title: "RageCar"
+        href: "http://ludumdare.com/compo/minild-60/?action=preview&uid=22490"
+        abs: true
+
+      - title: "RoboFight"
+        href: "http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=22490"
+        abs: true
+
+      - title: "SurvivorPong"
+        href: "http://ludumdare.com/compo/minild-58/?action=preview&uid=22490"
+        abs: true
+
+      - title: "MousyDare"
+        href: "http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=22490"
+        abs: true
+
+- title: "Projects"
+  href: "#"
+  children:
+    - title: "SilenceEngine"
+      href: "https://silenceengine.goharsha.com/"
+      abs: true
+
+    - title: "WebGL4J"
+      href: "https://goharsha.com/WebGL4J/"
+      abs: true
+
+    - title: "GWT-AL"
+      href: "https://github.com/sriharshachilakapati/GWT-AL/"
+      abs: true
+
+    - title: "EasyJSON"
+      href: "https://github.com/sriharshachilakapati/EasyJSON/"
+      abs: true
+
+    - title: "EasyXML"
+      href: "https://github.com/sriharshachilakapati/EasyXML/"
+      abs: true
+
+    - title: "SimplyCpp"
+      href: "https://github.com/sriharshachilakapati/SimplyCpp/"
+      abs: true
+
+    - title: "GwtOpenType"
+      href: "https://github.com/sriharshachilakapati/GwtOpenType"
+      abs: true
+
+    - title: "ClassJS"
+      href: "classjs"
 
 - title: "Blog"
   href: "blog"
