@@ -143,11 +143,11 @@ while (parent->left != NULL || parent->right != NULL)
     float cost1, cost2;
 
     // Test the cost with left child
-    combinedAABB = aabbCombine(node->aabb, *root->left->aabb);
+    combinedAABB = aabbCombine(node->aabb, parent->left->aabb);
     cost1 = aabbPerimeter(combinedAABB);
 
     // Test the cost with the right child
-    combinedAABB = aabbCombine(node->aabb, *root->right->aabb);
+    combinedAABB = aabbCombine(node->aabb, parent->right->aabb);
     cost2 = aabbPerimeter(combinedAABB);
 
     if (cost1 < cost2)
@@ -159,8 +159,6 @@ while (parent->left != NULL || parent->right != NULL)
 // Insert in parent
 return aabbTreeInsert(&parent, node);
 ~~~
-
-{% comment %}*{% endcomment %}
 
 So that is how we insert a new node into the AABB tree. It might look so heavy, but in fact it is actually very easy. At the end we call the `aabbTreeRecalculateUp` function, which starts at the node, and walks up in the hierarchy fixing the AABBs and the tree heights. It will also make a call to `aabbTreeBalance` after doing it, so our tree remains balanced.
 
