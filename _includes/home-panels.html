@@ -64,14 +64,18 @@ experiments! I love to code, and I love to talk about code.
                 <ul class="nav navbar-pills navbar-stacked">
                     {% assign counter = 0 %}
                     {% for item in site.posts %}
-                    {% unless item.lang %}
-                    {% if counter < 5 %}
-                    <li>
-                        <a href="{{ site.url | append: item.url }}">{{ item.title }}</a>
-                    </li>
-                    {% assign counter = counter | plus: 1 %}
-                    {% endif %}
-                    {% endunless %}
+                        {% assign lang = 'en' %}
+
+                        {% if item.lang %}
+                            {% assign lang = item.lang %}
+                        {% endif %}
+
+                        {% if lang == 'en' and counter < 5 %}
+                            <li>
+                                <a href="{{ site.url | append: item.url }}">{{ item.title }}</a>
+                            </li>
+                            {% assign counter = counter | plus: 1 %}
+                        {% endif %}
                     {% endfor %}
                 </ul>
 
