@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+{% assign lang = 'en' %}
+{% if page.lang %}
+    {% assign lang = page.lang %}
+{% endif %}
+<html lang="{{ lang }}">
 {% include head.html %}
 <body>
     {% include fb_sdk.html %}
@@ -7,7 +11,7 @@
     <div class="wrapper">
         {% include header.html %}
 
-        <div class="container content">
+        <div class="container content {{ lang }}">
             <div class="row">
                 <div id="sidebar" class="sidebar col-xs-12 col-sm-12 col-lg-2">
                     <img id="adblocker" src="/assets/images/adblocker.png" style="display: none; height: 100%;"></img>

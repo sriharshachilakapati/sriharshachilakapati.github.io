@@ -4,4 +4,18 @@
     {% assign identifier = include.identifier %}
 {% endif %}
 
+{% if page.ref %}
+    {% if page.layout == 'post' %}
+        {% assign items = site.posts %}
+    {% else %}
+        {% assign items = site.pages %}
+    {% endif %}
+
+    {% for item in items %}
+        {% if item.ref == page.ref and item.lang == 'en' %}
+            {% assign identifier = item.url %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
 <span class="disqus-comment-count" data-disqus-url="https://goharsha.com{{ identifier }}"></span>

@@ -6,11 +6,11 @@
                 src="{{ site.url }}/assets/images/home/profile.jpg">
 
                 <p class="home-links">
-                <a href="https://www.linkedin.com/in/sriharshachilakapati"><span class="fa fa-linkedin-square fa-2x"></span></a>
-                &nbsp;&nbsp;<a href="https://www.facebook.com/goharshasite"><span class="fa fa-facebook-square fa-2x"></span></a>
-                &nbsp;&nbsp;<a href="http://stackoverflow.com/users/1026805/sri-harsha-chilakapati"><span class="fa fa-stack-overflow fa-2x"></span></a>
-                &nbsp;&nbsp;<a href="https://github.com/sriharshachilakapati/"><span class="fa fa-github-square fa-2x"></span></a>
-                &nbsp;&nbsp;<a href="mailto://hello@goharsha.com"><span class="fa fa-envelope fa-2x"></span></a>
+                    <a href="https://www.linkedin.com/in/sriharshachilakapati"><span class="fa fa-linkedin-square fa-2x"></span></a>
+                    &nbsp;&nbsp;<a href="https://www.facebook.com/goharshasite"><span class="fa fa-facebook-square fa-2x"></span></a>
+                    &nbsp;&nbsp;<a href="http://stackoverflow.com/users/1026805/sri-harsha-chilakapati"><span class="fa fa-stack-overflow fa-2x"></span></a>
+                    &nbsp;&nbsp;<a href="https://github.com/sriharshachilakapati/"><span class="fa fa-github-square fa-2x"></span></a>
+                    &nbsp;&nbsp;<a href="mailto://hello@goharsha.com"><span class="fa fa-envelope fa-2x"></span></a>
                 </p>
 
                 {% capture md %}
@@ -31,21 +31,21 @@ experiments! I love to code, and I love to talk about code.
                 <p>StackOverflow</p>
                 <p>
                     <a href="http://stackoverflow.com/users/1026805/sri-harsha-chilakapati">
-                    <img src="http://stackoverflow.com/users/flair/1026805.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Sri Harsha Chilakapati at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+                        <img src="http://stackoverflow.com/users/flair/1026805.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Sri Harsha Chilakapati at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
                     </a>
                 </p>
 
                 <p>GameDev</p>
                 <p>
                     <a href="http://gamedev.stackexchange.com/users/12820/sri-harsha-chilakapati">
-                    <img src="http://gamedev.stackexchange.com/users/flair/12820.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Game Development Stack Exchange, Q&amp;A for professional and independent game developers" title="profile for Sri Harsha Chilakapati at Game Development Stack Exchange, Q&amp;A for professional and independent game developers">
+                        <img src="http://gamedev.stackexchange.com/users/flair/12820.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Game Development Stack Exchange, Q&amp;A for professional and independent game developers" title="profile for Sri Harsha Chilakapati at Game Development Stack Exchange, Q&amp;A for professional and independent game developers">
                     </a>
                 </p>
 
                 <p>SuperUser</p>
                 <p>
                     <a href="http://superuser.com/users/153249/sri-harsha-chilakapati">
-                    <img src="http://superuser.com/users/flair/153249.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Super User, Q&amp;A for computer enthusiasts and power users" title="profile for Sri Harsha Chilakapati at Super User, Q&amp;A for computer enthusiasts and power users">
+                        <img src="http://superuser.com/users/flair/153249.png" width="208" height="58" alt="profile for Sri Harsha Chilakapati at Super User, Q&amp;A for computer enthusiasts and power users" title="profile for Sri Harsha Chilakapati at Super User, Q&amp;A for computer enthusiasts and power users">
                     </a>
                 </p>
 
@@ -62,10 +62,16 @@ experiments! I love to code, and I love to talk about code.
             <div class="panel-heading">Recent Posts</div>
             <div class="panel-body">
                 <ul class="nav navbar-pills navbar-stacked">
-                    {% for item in site.posts | limit: 5 %}
+                    {% assign counter = 0 %}
+                    {% for item in site.posts %}
+                    {% unless item.lang %}
+                    {% if counter < 5 %}
                     <li>
                         <a href="{{ site.url | append: item.url }}">{{ item.title }}</a>
                     </li>
+                    {% assign counter = counter | plus: 1 %}
+                    {% endif %}
+                    {% endunless %}
                     {% endfor %}
                 </ul>
 
