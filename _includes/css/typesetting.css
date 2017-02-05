@@ -24,6 +24,20 @@ body
     line-height: 1.6em;
 }
 
+.te p
+{
+    font-family: 'Mallanna', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: #000;
+}
+
+.te h1, .te h2, .te h3, .te h4, .te h5, .te h6
+{
+    font-family: 'Raleway', 'Suravaram', sans-serif;
+}
+
 b
 {
     font-weight: 700;

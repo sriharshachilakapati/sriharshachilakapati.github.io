@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 'AABB Trees for Collision Detection'
+lang: en
+ref: 'colldetaabbtree'
 tags: ['Tutorial', 'Data Structures', 'Collision Detection']
 ---
 

@@ -11,6 +11,10 @@
     <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}{% if page.keywords and page.tags %}, {% endif %}{% assign keywords = page.keywords %}{% for tag in keywords %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+    {% if page.lang == 'te' %}
+    <link href="https://fonts.googleapis.com/css?family=Mallanna|Suravaram&amp;subset=telugu" rel="stylesheet">
+    {% endif %}
+
     <!-- Metadata for Google Webmaster Tools verification -->
     <meta name="google-site-verification" content="cobHVjKdC8AVsYtRjX_kiARRePeNQBG4-wvdw6MKy3s" />
 
