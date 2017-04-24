@@ -10,6 +10,10 @@
 - title: "Games"
   href: "#"
   children:
+      - title: "PlanetDefense"
+        href: "https://goharsha.com/PlanetDefense/"
+        abs: true
+
       - title: "LDSnake"
         href: "https://goharsha.com/LDSnake/"
         abs: true
