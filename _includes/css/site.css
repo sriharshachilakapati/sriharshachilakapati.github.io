@@ -21,8 +21,8 @@ html, body {
 
 body {
     background-color: #f8f8f8;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px,
-                        rgba(255,255,255,.5) 70px);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.3) 35px,
+                        rgba(255,255,255,.3) 70px);
 }
 
 .wrapper

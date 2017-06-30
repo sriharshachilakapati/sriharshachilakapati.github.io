@@ -26,7 +26,7 @@ After all this, I like writing tutorials. You can read them, and currently I'm w
 
 <div class="panel panel-default" markdown="1">
 <div class="panel-body" markdown="1">
-I'm a student of Computer Science in Sri Vasavi Engineering College, Tadepalligudem, India. Right now I'm studying 3<sup>rd</sup> year of the B.Tech programme. In the free time, I spend my time at [StackOverflow](https://stackoverflow.com) and other StackExchange websites. Also I'm an active member in [java-gaming](http://java-gaming.org/) forums.
+I'm a student of Computer Science in Sri Vasavi Engineering College, Tadepalligudem, India. Right now I'm studying 4<sup>th</sup> year of the B.Tech programme. In the free time, I spend my time at [StackOverflow](https://stackoverflow.com) and other StackExchange websites. Also I'm an active member in [java-gaming](http://java-gaming.org/) forums.
 
 I'm also very active on [GitHub](https://github.com/sriharshachilakapati/) and recently I have taken up the challenge of increasing the longest streak count, but by legitimate commits. Right now, I have a few more than a hundred days in the streak. This is all about me that I can say right now.
 
