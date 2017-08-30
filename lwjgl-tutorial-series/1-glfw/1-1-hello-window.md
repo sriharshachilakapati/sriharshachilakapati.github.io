@@ -3,29 +3,20 @@ title: Hello Window
 layout: lwjgltutorial
 permalink: /lwjgl-tutorial-series/hello-window/
 section: 1
+updated: true
 ---
 
 Welcome to the first part of the LWJGL Tutorial Series. The aim of this first tutorial in this series is to teach you how to create a window. I also show you how to setup LWJGL with your project in this same tutorial.
 
-If you still haven’t configured LWJGL with your project, the process is very simple. First go to [LWJGL Website](http://www.lwjgl.org/download) and download the latest nightly. Once downloaded, extract the ZIP file and you will see these contents.
+If you still haven’t configured LWJGL with your project, the process is very simple. First go to [LWJGL Website](https://www.lwjgl.org/download) and customize your LWJGL build. Get the latest release (3.1.2 at the time of this writing) with the following checked. We will add additional LWJGL modules when we need them later.
 
-~~~sh
-.
-├── doc
-├── jar            # The JAR file we need will be here
-├── native         # The natives we need will be here
-└── src.zip        # This is the source code of LWJGL
+Select the preset as **Minimal OpenGL** and add **JOML** extension. Now get the Gradle build file. Once done, just edit the gradle build script to apply the java plugin.
 
-4 directories, 30 files
+~~~groovy
+apply plugin: 'java'
 ~~~
 
-The above is the directory tree of the LWJGL download. If you take a look, you will find three main directories, which contains the docs, jars and also the natives which are required.
-
-|`doc`   |Contains LICENCE files and the LWJGL JavaDocs                                  |
-|`jar`   |Contains the LWJGL JAR file (`lwjgl.jar`)                                      |
-|`native`|Contains the required native libraries for various platforms and architectures |
-
-The setup is very simple, just copy the `jar` and `native` directories to the directory containing your Java project. Add the JAR files from the `jar` directory to the classpath. Then in your run-configuration, set the VM Parameters to `-Djava.library.path=native/` and you are ready to go.
+Once done, you can import this into any IDE of your choice. Then you are ready to code.
 
 ## The GLFW Package
 
@@ -41,10 +32,12 @@ We also import the `GL11` class members and `MemoryUtil` class members in our co
 
 ## Initialising GLFW
 
-Before using GLFW that we just imported, we have to initialise it. This initialisation is done by calling `glfwInit()` function. This function returns `0` if there is any error, which is also the value of `GL_FALSE`, the constant we import from the `GL11` class. Here is how you initialise the library.
+Before using GLFW that we just imported, we have to initialise it. This initialisation is done by calling `glfwInit()` function. This function returns a boolean that specifies the success of initialization. However, it might fail for different reasons, and to prevent that, we create a callback for errors so that we get to know where the errors reside.
 
 ~~~java
-if (glfwInit() != GL_TRUE)
+GLFWErrorCallback.createPrint(System.err).set();
+
+if (!glfwInit())
 {
     System.err.println("Error initializing GLFW");
     System.exit(1);
@@ -71,9 +64,9 @@ We need a window to render our contents to the screen and the player to be able 
 public static long glfwCreateWindow(int width, int height, CharSequence title, long monitor, long share);
 ~~~
 
-Let me quickly explain the properties here. The `width`, `height` and `title`, obviously specifies the size and title of the window. The two new ones are `monitor` and `share`. GLFW has support for multiple monitors, setting the monitor to any monitors will cause the new window to be a fullscreen window over that monitor. If you need a windowed mode (no fullscreen), you set that to the `NULL` constant.
+Let me quickly explain the properties here. The _width_, _height_ and _title_, obviously specifies the size and title of the window. The two new ones are _monitor_ and _share_. GLFW has support for multiple monitors, setting the monitor to any monitors will cause the new window to be a fullscreen window over that monitor. If you need a windowed mode (no fullscreen), you set that to the `NULL` constant.
 
-The `share` property is only used if you want a shared context. Suppose if you want to share the same context between two windows, you pass the handle of the first window as share of the second window. Since we only want one window here, we set the second property to `NULL` constant.
+The _share_ property is only used if you want a shared context. Suppose if you want to share the same context between two windows, you pass the handle of the first window as share of the second window. Since we only want one window here, we set the second property to `NULL` constant.
 
 ~~~java
 long windowID = glfwCreateWindow(640, 480, "My GLFW Window", NULL, NULL);
@@ -114,7 +107,7 @@ In order to render to the screen, we need a few more steps, we need to specify t
 
 ~~~java
 glfwMakeContextCurrent(windowID);
-GLContext.createFromCurrent();
+GL.createCapabilities();
 glfwSwapInterval(1);
 ~~~
 
@@ -122,7 +115,7 @@ The first line specifies GLFW to make the context of the window whose handle is 
 
 ## Writing the Render Loop
 
-The render loop is placed in the `start()` method of the `Game` class. This method starts the render loop, which initialises the game, and steps into a `update`-`render` loop. Finally, it calls the `dispose()` method and destroys the window.
+The render loop is placed in the `start()` method of the `Game` class. This method starts the render loop, which initialises the game, and steps into a update-render loop. Finally, it calls the `dispose()` method and destroys the window.
 
 ~~~java
 public void start()
@@ -135,7 +128,7 @@ public void start()
     init();
 
     // Loop continuously and render and update
-    while (glfwWindowShouldClose(windowID) != GL_TRUE)
+    while (!glfwWindowShouldClose(windowID))
     {
         // Get the time
         now = (float) glfwGetTime();
@@ -162,7 +155,7 @@ public void start()
 }
 ~~~
 
-I’m not going to explain what `delta` is, and about this loop, since that is not the main aspect of this series. If you want to learn more on that aspect, google `game loops` and you will get a lot of knowledge on them. Okay, now if you run it, you will be greeted with a window like this.
+I’m not going to explain what `delta` is, and about this loop, since that is not the main aspect of this series. If you want to learn more on that aspect, google **game loops** and you will get a lot of knowledge on them. Okay, now if you run it, you will be greeted with a window like this.
 
 <div class="text-center" markdown='1'>
 ![GLFW Window]({{ site.url }}/assets/images/lwjgl-tutorial-series/hello-window.png)
@@ -174,4 +167,5 @@ And this is the end of the first part of the LWJGL Tutorial Series. In the next 
 
 All the source code in this series is hosted on the [GitHub repository](https://sriharshachilakapati/LWJGL-Tutorial-Series/) here.
 
-  - [Game.java](https://github.com/sriharshachilakapati/LWJGL-Tutorial-Series/blob/b388c1c54e8ffe9a785e22411756495b757dfb59/src/com/shc/tutorials/lwjgl/Game.java)
+  - [build.gradle](https://github.com/sriharshachilakapati/LWJGL-Tutorial-Series/blob/c77684f2d584dd5f79acc68301260a9e5a3d5d07/build.gradle)
+  - [Game.java](https://github.com/sriharshachilakapati/LWJGL-Tutorial-Series/blob/c77684f2d584dd5f79acc68301260a9e5a3d5d07/src/main/java/com/shc/tutorials/lwjgl/Game.java)

@@ -3,13 +3,14 @@ title: LWJGL Tutorial Series
 layout: lwjgltutorial
 section: 0
 permalink: /lwjgl-tutorial-series/
+updated: true
 ---
 
 Welcome to the LWJGL Tutorial Series Home page. This is where I write articles on LWJGL introducing modern graphics card programming with OpenGL 3.2 Core. These tutorials start at the very basic level, setting up the workspace and move on eventually building our framework and learning how GPUs work.
 
 ## What is LWJGL?
 
-LWJGL means **Light Weight Java Game Library**. It provides low level bindings to native libraries such as **OpenGL**, **OpenAL** and **OpenCL** to Java using JNI. Though LWJGL provides access to the most powerful libraries, it is not for everyone, as it needs a good understanding of those APIs. Don’t worry though, by the end of this tutorial series, I’m sure that you will be using LWJGL with the greatest ease. You can find LWJGL [here](http://www.lwjgl.org/).
+LWJGL means **Light Weight Java Game Library**. It provides low level bindings to native libraries such as **OpenGL**, **OpenAL** and **OpenCL** to Java using JNI. Though LWJGL provides access to the most powerful libraries, it is not for everyone, as it needs a good understanding of those APIs. Don’t worry though, by the end of this tutorial series, I’m sure that you will be using LWJGL with the greatest ease. You can find LWJGL [here](https://www.lwjgl.org/).
 
 ## What is GLFW?
 
