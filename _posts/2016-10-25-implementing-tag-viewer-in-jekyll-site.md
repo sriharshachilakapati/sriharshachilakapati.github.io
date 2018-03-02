@@ -41,7 +41,8 @@ The approach we are going to take is to make Jekyll generate a JSON file with al
     ],
 
     "tags": [
-        {% for tag in (site.tags | sort) %}
+        {% assign sortedTags = site.tags | sort %}
+        {% for tag in sortedTags %}
             "{{ tag[0] }}"{% if forloop.last == false %},{% endif %}
         {% endfor %}
     ]

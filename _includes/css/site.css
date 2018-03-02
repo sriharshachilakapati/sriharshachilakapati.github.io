@@ -39,6 +39,11 @@ body {
     min-height: 4em;
 }
 
+.footer a, .footer a :hover
+{
+    color: inherit !important;
+}
+
 .comments
 {
     margin-top: 40px;
