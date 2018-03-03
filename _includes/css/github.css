@@ -2,7 +2,7 @@
 .c { color: #999988; font-style: italic } /* Comment */
 .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .k { color: #000000; font-weight: bold } /* Keyword */
-.o { color: #000000; font-weight: bold } /* Operator */
+.o { color: #000000; font-weight: normal; } /* Operator */
 .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
 .c1 { color: #999988; font-style: italic } /* Comment.Single */
@@ -34,7 +34,7 @@
 .ne { color: #990000; font-weight: bold } /* Name.Exception */
 .nf { color: #990000; font-weight: bold } /* Name.Function */
 .nl { color: #990000; font-weight: bold } /* Name.Label */
-.nn { color: #555555; } /* Name.Namespace */
+.nn { color: #000000; font-weight: bold; } /* Name.Namespace */
 .nt { color: #000080 } /* Name.Tag */
 .nv { color: #008080 } /* Name.Variable */
 .ow { color: #000000; font-weight: bold } /* Operator.Word */

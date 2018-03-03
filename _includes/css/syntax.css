@@ -2,7 +2,7 @@ pre
 {
     padding: 15px;
     padding-left: 20px;
-    font-size: 0.98em;
+    font-size: initial;
 
     background-color: rgba(220, 220, 220, 0.3);
 
@@ -19,4 +19,6 @@ pre
 code
 {
     max-width: 100%;
+    color: #000000;
+    background-color: #f1f1f1;
 }
