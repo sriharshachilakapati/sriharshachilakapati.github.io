@@ -10,7 +10,7 @@ The aim of this post is to explain how SilenceEngine works across platforms, and
 
 What is a runtime, and why is it needed? This question strikes first, and here is the answer. A runtime is an implementation of the SilenceEngine platform which delegates the work to the native platforms. To work on all the platforms, SilenceEngine uses the concept of devices and the runtime implements these devices for the target platform.
 
-{% include image href="/assets/images/silenceengine-thoughts/basic-structure.png" alt="SilenceEngine Structure" %}
+{% include components/widgets/image.html href="/assets/images/silenceengine-thoughts/basic-structure.png" alt="SilenceEngine Structure" %}
 
 Right now, there are four different runtimes which make it possible for the engine to run on different platforms. Backend is a module which provides a runtime. They are listed below. These runtimes when combined with SilenceEngine and your game, creates the final game that actually runs on the target platform.
 
@@ -40,7 +40,7 @@ The instances for these devices will be created by the runtime, and they are acc
 
 Every game using SilenceEngine should have a public class which extends from the `Game` class. The game class contains methods for each stage in the life cycle, which the user can override to do his work. There is no need to call the super methods here, they do nothing by default. Every game starts with initialization and ends with disposing the resources. In between there's a loop of update and render calls.
 
-{% include image href="/assets/images/silenceengine-cross-platform/life-cycle.png" alt="SilenceEngine game life cycle" %}
+{% include components/widgets/image.html href="/assets/images/silenceengine-cross-platform/life-cycle.png" alt="SilenceEngine game life cycle" %}
 
 Apart from these states, there is an additional method to be overridden called as `resized` which is automatically called by the display device whenever the game window is resized or whenever the screen orientation is changed. All these handlers are fired by event manager that SilenceEngine uses. Using it, you can add additional callbacks on all these events.
 

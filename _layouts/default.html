@@ -1,74 +1,28 @@
 <!DOCTYPE html>
+
 {% assign lang = 'en' %}
 {% if page.lang %}
-    {% assign lang = page.lang %}
+{% assign lang = page.lang %}
 {% endif %}
+
 <html lang="{{ lang }}">
-{% include head.html %}
+
+{% include structure/head.html %}
+
 <body>
-    {% include fb_sdk.html %}
-    {% include google-analytics.html %}
     <div class="wrapper">
-        {% include header.html %}
-
-        <div class="container content {{ lang }}">
-            <div class="row">
-                <div id="sidebar" class="sidebar col-xs-12 col-sm-12 col-lg-2">
-                    <img id="adblocker" src="/assets/images/adblocker.png" style="display: none; height: 100%;"></img>
-
-                    <div class="ad_container">
-                        {% unless site.development %}
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Front page - 1 (goharsha.com) -->
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-4775129760038978"
-                                 data-ad-slot="2806486240"
-                                 data-ad-format="auto"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        {% endunless %}
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-lg-10">
-                    {{ content }}
-                </div>
+        {% include components/sidebar.html %}
+        
+        <div id="main-pane">
+            {% include components/navigation/navbar.html %}
+            
+            <div id="content">
+                {{ content }}
+            
+                <div class="push"></div>
             </div>
+            
+            {% include components/footer.html %}
         </div>
-
-        <div class="push"></div>
     </div>
-
-    {% include footer.html %}
-
-    <script type="text/javascript">
-    var disqus_shortname = 'goharsha';
-
-    (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-
-    <script>
-    $(document).ready(function()
-    {
-        setTimeout(function()
-        {
-            $('.ad_container').each(function()
-            {
-                var ad = this;
-
-                if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0)
-                    $('#adblocker').css('display', 'block');
-            });
-        }, 2000);
-    });
-    </script>
-  </body>
-
 </html>

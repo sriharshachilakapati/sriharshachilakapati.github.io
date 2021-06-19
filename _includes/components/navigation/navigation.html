@@ -1,0 +1,17 @@
+{% for item in include.nav %}
+    {% if item.children %}
+        <li class="dropdown nav-item">
+            {% assign dropdownTag = item.title | slugify | append: "-dropdown" %}
+
+            <a href="#" id="{{ dropdownTag }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">{{ item.title }}</a>
+
+            <ul class="dropdown-menu" aria-labelledby="{{ dropdownTag }}">
+                {% include components/navigation/navigation.html nav=item.children %}
+            </ul>
+        </li>
+    {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% unless item.abs %}{{ site.url }}/{% endunless %}{{ item.href }}{% unless item.abs %}/{% endunless %}">{{ item.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}

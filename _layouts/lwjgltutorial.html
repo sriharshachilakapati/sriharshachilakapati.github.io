@@ -18,7 +18,7 @@ layout: default
             <div class="row toc">
                 <h3>Contents</h3>
                 <ul class="nav navbar-pills navbar-stacked">
-                    {% include tutorial-contents.html items=site.data.lwjgltuts %}
+                    {% include components/content/tutorial-contents.html items=site.data.lwjgltuts %}
                 </ul>
             </div>
         </div>
@@ -27,8 +27,8 @@ layout: default
     </article>
 
     <div class="text-center">
-        {% include share-buttons.html url=page.url title=page.title %}
+        {% include components/content/share-buttons.html url=page.url title=page.title %}
     </div>
 
-    {% include comments.html %}
+    {% include components/content/comments/comments.html %}
 </div>

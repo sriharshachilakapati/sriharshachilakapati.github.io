@@ -4,13 +4,13 @@ title: Blog
 description: A Blog where the posts are written by myself!
 ---
 
-{% include pagination.html %}
+{% include components/content/pagination.html %}
 
 {% for p in paginator.posts %}
-    {% include blog-entry.html post=p %}
+    {% include components/content/blog-entry.html post=p %}
 {% endfor %}
 
-{% include pagination.html %}
+{% include components/content/pagination.html %}
 
 <div class="row">
 <p class="text-center">

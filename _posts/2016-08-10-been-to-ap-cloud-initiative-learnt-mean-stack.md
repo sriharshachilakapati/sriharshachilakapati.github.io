@@ -10,7 +10,7 @@ The government of Andhra Pradesh has initiated the **AP Cloud Initiative** five 
 
 All of us has never been to Vizag city, and when we reached there, it was a really cool place, although tiny showers of rain are happening due to this being the rainy season here. We got boarding at a local lodge, and we were there at Vizag city one day before the event started. So we used that day to get to know the surroundings, visit the beach, and get a clear path on the address of the campus and the training area.
 
-{% include image href='/assets/images/vizag-ap-cloud/beach_selfie.jpg" width="500px' alt='A selfie at RK beach, Vizag city' %}
+{% include components/widgets/image.html href='/assets/images/vizag-ap-cloud/beach_selfie.jpg" width="500px' alt='A selfie at RK beach, Vizag city' %}
 
 The next day we went to attend the inauguration function held at the **Andhra University** campus and immediately after the inauguration is done, we were taken to their office campus at Miracle Heights. It was an amazing location, with sea visible from the top.
 
