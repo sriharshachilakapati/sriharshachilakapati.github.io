@@ -20,11 +20,11 @@ layout: default
                             {% if other.ref == page.ref %}
                                 {% if page.lang == other.lang %}
                                     <option value="{{ site.url }}{{ other.url }}" selected="selected">
-                                        {% include language-string.html lang = other.lang %}
+                                        {% include components/content/language-string.html lang = other.lang %}
                                     </option>
                                 {% else %}
                                     <option value="{{ site.url }}{{ other.url }}">
-                                        {% include language-string.html lang = other.lang %}
+                                        {% include components/content/language-string.html lang = other.lang %}
                                     </option>
                                 {% endif %}
                             {% endif %}
@@ -39,7 +39,7 @@ layout: default
         </div>
 
         <div class="col-xs-12 col-sm-5 col-lg-5">
-            <h2><small class="pull-right">{% include comments-count.html %}</small></h2>
+            <h2><small class="pull-right">{% include components/content/comments/comments-count.html %}</small></h2>
         </div>
     </div>
   </header>
@@ -49,8 +49,8 @@ layout: default
   </article>
 
   <div class="text-center">
-      {% include share-buttons.html url=page.url title=page.title %}
+      {% include components/content/share-buttons.html url=page.url title=page.title %}
   </div>
 
-  {% include comments.html %}
+  {% include components/content/comments/comments.html %}
 </div>

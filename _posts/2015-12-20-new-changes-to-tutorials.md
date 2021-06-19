@@ -10,7 +10,7 @@ I have recently made enhancements to the tutorial system in this site, which all
 ## The Contents Pane
 
 <div class="pull-right">
-{% include image href="/assets/images/changes-to-tutorials/lwjgl-tuts_contents.png" alt="A screenshot of contents pane" %}
+{% include components/widgets/image.html href="/assets/images/changes-to-tutorials/lwjgl-tuts_contents.png" alt="A screenshot of contents pane" %}
 </div>
 
 The contents pane existed in the tutorials for a long time, so what is changed? I'm now using YAML data that Jekyll offers to write the contents, which gets copied into every post with the help of a recursively included html template file.

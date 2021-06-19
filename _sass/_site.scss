@@ -1,118 +1,18 @@
-body
-{
-    font-size: 1.75em;
-    text-align: justify;
-}
-
-div
-{
-    padding: 0;
-    margin: 0;
-}
-
-img
-{
-    max-width: 100%;
-}
-
 html, body {
     height: 100%;
 }
 
-body {
-    background-color: #f8f8f8;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.3) 35px,
-                        rgba(255,255,255,.3) 70px);
-}
+.wrapper {
+    @extend %container-fluid;
 
-.wrapper
-{
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -4em;
+    padding: 0;
 }
 
-.footer, .push
-{
+.footer, .push {
     clear: both;
     min-height: 4em;
-}
-
-.footer a, .footer a :hover
-{
-    color: inherit !important;
-}
-
-.comments
-{
-    margin-top: 40px;
-}
-
-.toc
-{
-    border: 1px solid #ecf0f1;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    min-width: 300px;
-    background: #ecf0f1;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-}
-
-.navbar-stacked li > a
-{
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-}
-
-.subli {
-    padding-left: 50px !important;
-}
-
-.activeli {
-    background-color: #ddd;
-}
-
-.btn {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.share-buttons {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.panel {
-    border-radius: 15px;
-    background-color: #ecf0f1;
-    border: 1px solid #16a085 !important;
-}
-
-.panel li {
-    text-align: left !important;
-}
-
-.panel-heading {
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
-    background-color: #16a085 !important;
-    color: #fff !important;
-}
-
-.img-responsive {
-    margin: 0 auto;
-}
-
-.main-logo {
-    margin-bottom: 16px;
-}
-
-.home-links a {
-    color: #333 !important;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
 }

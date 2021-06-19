@@ -15,7 +15,7 @@ The command `sudo` is most common among linux and mac users. It allows people to
 With the help of this small utility, you can launch any program using administer privileges. The only thing this utility differs from the original sudo command is that instead of asking you for the administer password, it presents you with UAC dialog box, just as in the case that you right-click on the executable and select to run as administrator. Another limitation is that this currently only supports basic execution, no `-i` or other options provided by the original `sudo` command. You can download it here.
 
 <div class="text-center">
-{% include download url='http://downloads.goharsha.com/sudo.exe' text='Download SUDO.exe' %}
+{% include components/widgets/download.html url='http://downloads.goharsha.com/sudo.exe' text='Download SUDO.exe' %}
 </div>
 
 To install it, you will need a system with Windows Vista or above because it relies on UAC (Sorry XP users). Just place the file in a location like _**(C:\batch-utils)**_ for example, that is included in the `PATH` environment variable. An example is to run `sudo notepad` to open notepad as administrator (required to edit files over ftp locations). Hoping this little tool aids you when on Command Prompt.

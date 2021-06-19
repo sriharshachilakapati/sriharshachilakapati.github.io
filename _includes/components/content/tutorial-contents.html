@@ -30,8 +30,8 @@
     </li>
 
     {% if item.children and include.showall == true %}
-        {% include tutorial-contents.html child=true items=item.children %}
+        {% include components/content/tutorial-contents.html child=true items=item.children %}
     {% elsif item.children and item.section == page.section and page.section != 0 %}
-        {% include tutorial-contents.html child=true items=item.children %}
+        {% include components/content/tutorial-contents.html child=true items=item.children %}
     {% endif %}
 {% endfor %}

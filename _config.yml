@@ -30,9 +30,18 @@ kramdown:
     syntax-highlighter: rouge
 
 # Server settings
-host: '0.0.0.0'
-port: '8080'
+host: 'localhost'
+port: 8080
 
 # List of plugins for the website to compile (only paginate plugin is used)
 plugins:
     - jekyll-paginate
+
+# Exclude certain files from Jekyll generation
+exclude: [
+  "CNAME",
+  "LICENSE",
+  "README.md",
+  ".gitignore",
+  ".tern-project"
+]

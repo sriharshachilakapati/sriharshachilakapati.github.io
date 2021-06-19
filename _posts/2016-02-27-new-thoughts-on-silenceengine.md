@@ -11,7 +11,7 @@ The aim of this post is to put my new thoughts on the improvement of SilenceEngi
 
 I wanted SilenceEngine to be really cross platform, and export to desktop, html5 and android with a single code base. The desktop is already working, but is hard to get working in html5 due to the usage of blocking I/O, where the web requires to use asynchronous non-blocking I/O. So I had to redesign it, and here is an overview of the process.
 
-{% include image href='/assets/images/silenceengine-thoughts/basic-structure.png' alt='SilenceEngine Overview' %}
+{% include components/widgets/image.html href='/assets/images/silenceengine-thoughts/basic-structure.png' alt='SilenceEngine Overview' %}
 
 I'll be writing one backend per platform, so the desktop backend uses LWJGL3 for the bindings, the android backend uses the native android libraries, and the html5 backend uses GWT with WebGL4J and GWT-AL libraries. The work on SilenceEngine 1.0.1 will start in a new branch in the repository, and will be a multi project one with the backends separated right from the start.
 
@@ -41,7 +41,7 @@ The above code is just a sample right now, but it will be in that fashion. This 
 
 A device is an interface (defined under the name `IDevice` in the core package) which provides signatures of the low level methods that the engine uses to communicate with the backends. There will be three device interfaces defined in the engine, and the backends should implement them to do the work using the platform specific APIs. Here is an overview of how those devices work.
 
-{% include image href='/assets/images/silenceengine-thoughts/device-graphics.png' alt='The IGraphicsDevice' %}
+{% include components/widgets/image.html href='/assets/images/silenceengine-thoughts/device-graphics.png' alt='The IGraphicsDevice' %}
 
 As you can see in the above image, there will be interfaces `IGraphicsDevice` for handling the graphics, and each of the backends implement a graphics, such as the LWJGL backend will implement it in a class called as `LWJGLGraphicsDevice` whereas the GWT backend will implement it in a class called as `GWTGraphicsDevice` and these will be provided to the engine through starter classes.
 

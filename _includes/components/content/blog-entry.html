@@ -27,7 +27,7 @@
             {% endif %}
         </p>
 
-        <h2><small>Posted on {{ postDate }} and has {% include comments-count.html identifier=postUrl %}</small></h2>
+        <h2><small>Posted on {{ postDate }} and has {% include components/content/comments/comments-count.html identifier=postUrl %}</small></h2>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
 
 <div class="row post-blog-entry">
     <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
-        {% include share-buttons.html url=postUrl title=postTitle %}
+        {% include components/content/share-buttons.html url=postUrl title=postTitle %}
     </div>
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

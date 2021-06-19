@@ -6,7 +6,7 @@ keywords: ["hackintosh", "macintosh", "mac", "windows", "ubuntu", "linux", "osx"
 excerpt: "Hackintosh is a way for people who want to use Mac OS X but cannot afford the high prices of the apple hardware. Hackintoshing is the process of installing Mac OS X on a non-apple computer. In this tutorial, I'm going to show you how to triple boot Mavericks, Windows 8.1 and Ubuntu 13.10 on a normal pc. Before starting with this, make sure that you have backed up all your data as this process involves a complete format of your hard disk."
 ---
 
-{% include youtube id='dnkn-ItsQf4' %}
+{% include components/widgets/youtube.html id='dnkn-ItsQf4' %}
 
 ## Introduction
 

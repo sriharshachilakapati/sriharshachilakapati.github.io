@@ -26,7 +26,7 @@ System.out.println("Hello World!!");
 
 It looks cool isn't it? Care has been taken that the code blocks doesn't wrap text, but instead they overflow, allowing you to clearly read the text on mobiles, keeping track of the indentation easily. The following GIF shows the new navigation bar and the dropdown menu.
 
-{% include image href='/assets/images/complete-website-theme-and-tutorials-update/dropdown-menu.gif' alt='The new tweaked Dropdown menu' %}
+{% include components/widgets/image.html href='/assets/images/complete-website-theme-and-tutorials-update/dropdown-menu.gif' alt='The new tweaked Dropdown menu' %}
 
 There you can see the new navigation bar, and the colors. It is essentially the same as the previous one, but the dropdown background color is made a dark blue, and selection is actually a translucent gray color which makes any color dark automatically.
 
