@@ -1,0 +1,16 @@
+$sidebar-width: 300px;
+
+.sidebar {
+    width: $sidebar-width;
+}
+
+.sidebar-content {
+    position: fixed;
+
+    background-image: url('/assets/images/sidebar_bg.png');
+    background-size: cover;
+    
+    min-height: 100vh;
+    max-height: 100vh;
+    width: $sidebar-width;
+}

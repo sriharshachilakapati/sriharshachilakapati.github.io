@@ -10,16 +10,16 @@
 {% include structure/head.html %}
 
 <body>
-    <div class="wrapper">
+    <div class="d-flex flex-row flex-no-wrap align-items-stretch">
         {% include components/sidebar.html %}
         
-        <div id="main-pane">
+        <div class="wrapper flex-column flex-grow-1">
             {% include components/navigation/navbar.html %}
             
-            <div id="content">
-                {{ content }}
-            
-                <div class="push"></div>
+            <div id="content" class="container">
+                <div class="row m-lg-auto">
+                    {{ content }}
+                </div>
             </div>
             
             {% include components/footer.html %}
