@@ -1,3 +1,10 @@
 # Development mode, to enable it, use _development.yml along with _config.yml
 # jekyll serve --watch --config _config.yml,_development.yml
 development: true
+
+# Enable drafts and futures in development mode
+future: true
+show_drafts: true
+  
+# Enable strict front-matter to fail builds if errors are found
+strict_front_matter: true
