@@ -1,4 +1,4 @@
-$sidebar-width: 300px;
+$sidebar-width: 320px;
 
 .sidebar {
     width: $sidebar-width;
@@ -11,6 +11,31 @@ $sidebar-width: 300px;
     background-size: cover;
     
     min-height: 100vh;
-    max-height: 100vh;
     width: $sidebar-width;
+}
+
+.profile-pic {
+    width: 200px;
+    margin-top: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.profile-title {
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 70px;
+    text-align: center;
+    
+    color: #ffffff;
+}
+
+.profile-text {
+    font-family: Roboto;
+    color: #ffffff;
+    line-height: 1rem;
 }
