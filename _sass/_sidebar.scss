@@ -6,6 +6,7 @@ $sidebar-width: 320px;
 
 .sidebar-content {
     position: fixed;
+    padding-top: 60px;
 
     background-image: url('/assets/images/sidebar_bg.png');
     background-size: cover;
@@ -16,7 +17,6 @@ $sidebar-width: 320px;
 
 .profile-pic {
     width: 200px;
-    margin-top: 50px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -26,11 +26,9 @@ $sidebar-width: 320px;
     font-family: Pacifico;
     font-style: normal;
     font-weight: normal;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 28px;
-    line-height: 70px;
     text-align: center;
-    
     color: #ffffff;
 }
 
@@ -38,4 +36,15 @@ $sidebar-width: 320px;
     font-family: Roboto;
     color: #ffffff;
     line-height: 1rem;
+}
+
+.profile-icon {
+    color: #ffffff;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    color: #ffffff;
 }

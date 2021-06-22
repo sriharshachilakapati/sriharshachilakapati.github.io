@@ -1,0 +1,7 @@
+<div class="profile-icons">
+    {% for icon in site.data.social-icons %}
+    <a class="profile-icon" href="{{ icon.href }}">
+        <span class="fa {{ icon.icon }} fa-2x"></span>
+    </a>
+    {% endfor %}
+</div>
