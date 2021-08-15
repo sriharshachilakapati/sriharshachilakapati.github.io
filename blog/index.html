@@ -4,16 +4,25 @@ title: Blog
 description: A Blog where the posts are written by myself!
 ---
 
-{% include components/content/pagination.html %}
+<div class="container-fluid blog-hero position-relative">
+    <h1 class="blog-title">The Open Diary</h1>
+    <h2 class="blog-subtitle"><em><strong>Something</strong></em> about <em><strong>everything</strong></em></h2>
+</div>
 
-{% for p in paginator.posts %}
-    {% include components/content/blog-entry.html post=p %}
-{% endfor %}
+<div class="container">
+    <div class="row m-lg-auto">
+        {% include components/content/pagination.html %}
 
-{% include components/content/pagination.html %}
+        {% for p in paginator.posts %}
+            {% include components/content/blog-entry.html post=p %}
+        {% endfor %}
 
-<div class="row">
-<p class="text-center">
-Subscribe via <a href="{{site.url}}/feed.xml">RSS</a>
-</p>
+        {% include components/content/pagination.html %}
+
+        <div class="row">
+            <p class="text-center">
+                Subscribe via <a href="{{site.url}}/feed.xml">RSS</a>
+            </p>
+        </div>
+    </div>
 </div>
