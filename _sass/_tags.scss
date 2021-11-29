@@ -1,3 +1,17 @@
 #tagCloud {
     margin-bottom: 30px;
 }
+
+kbd {
+    color: #333;
+    background: #E1E1E1;
+    padding: 5px 10px;
+    margin: 2px;
+    display: inline-block;
+    font-family: 'Roboto';
+    font-size: 1em;
+}
+
+kbd:hover {
+    background: #D1D1D1;
+}
