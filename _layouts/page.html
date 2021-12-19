@@ -2,42 +2,50 @@
 layout: default
 ---
 
-<div class="post">
+<div class="container-fluid position-relative blog-hero">
+    <h1 class="blog-title">{{ page.title }}</h1>
+</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+{% if page.ref %}
+    <div class="container-fluid blog-post-tags">
+        <div class="container">
+            This page is also available in other languages
 
-    {% if page.ref %}
-        <div class="pull-right">
-            <label for="lang-select">Language:</label>
-            <select id="lang-select" onchange="window.location.href = this.value">
-                {% for other in site.pages %}
-                    {% if other.ref == page.ref %}
-                        {% if page.lang == other.lang %}
-                            <option value="{{ site.url }}{{ other.url }}" selected="selected">
-                                {% include components/content/language-string.html lang = other.lang %}
-                            </option>
-                        {% else %}
-                            <option value="{{ site.url }}{{ other.url }}">
-                                {% include components/content/language-string.html lang = other.lang %}
-                            </option>
+            <div class="pull-right">
+                <select id="lang-select" onchange="window.location.href = this.value">
+                    {% for other in site.posts %}
+                        {% if other.ref == page.ref %}
+                            {% if page.lang == other.lang %}
+                                <option value="{{ site.url }}{{ other.url }}" selected="selected">
+                                    {% include components/content/language-string.html lang = other.lang %}
+                                </option>
+                            {% else %}
+                                <option value="{{ site.url }}{{ other.url }}">
+                                    {% include components/content/language-string.html lang = other.lang %}
+                                </option>
+                            {% endif %}
                         {% endif %}
-                    {% endif %}
-                {% endfor %}
-            </select>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
-    {% endif %}
-  </header>
+    </div>
+{% endif %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row m-lg-auto col-sm-12 col-xs-12 blog-post-content">
+            <article>
+                {{ content }}
+            </article>
+        </div>
 
-  <div class="text-center">
-  {% include components/content/share-buttons.html url=page.url title=page.title %}
-  </div>
-
-    {% unless page.comments == false %}
-        {% include components/content/comments/comments.html %}
-    {% endunless %}
+        <div class="row text-center blog-post-share-buttons">
+            {% include components/content/share-buttons.html url=page.url title=page.title %}
+        </div>
+        
+        <div class="row blog-post-comments">
+            {% include components/content/comments/comments.html %}
+        </div>
+    </div>
 </div>
