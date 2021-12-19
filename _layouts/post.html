@@ -1,56 +1,59 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="post-title">{{ page.title }}</h1>
+<div class="container-fluid position-relative blog-hero">
+    <h1 class="blog-title">{{ page.title }}</h1>
 
-            {% for tag in page.tags %}
-                <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
-            {% endfor %}
+    <h2 class="blog-subtitle">
+        <small>
+            Written by <em><strong>Sri Harsha Chilakapati</strong></em> on <em>{{ page.date | date: "%b %-d, %Y" }}</em>
+        </small>
+    </h2>
+</div>
 
-            {% if page.ref %}
-                <div class="pull-right">
-                    <label for="lang-select">Language:</label>
-                    <select id="lang-select" onchange="window.location.href = this.value">
-                        {% for other in site.posts %}
-                            {% if other.ref == page.ref %}
-                                {% if page.lang == other.lang %}
-                                    <option value="{{ site.url }}{{ other.url }}" selected="selected">
-                                        {% include components/content/language-string.html lang = other.lang %}
-                                    </option>
-                                {% else %}
-                                    <option value="{{ site.url }}{{ other.url }}">
-                                        {% include components/content/language-string.html lang = other.lang %}
-                                    </option>
-                                {% endif %}
+<div class="container-fluid blog-post-tags">
+    <div class="container">
+        {% for tag in page.tags %}
+            <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
+        {% endfor %}
+
+        {% if page.ref %}
+            <div class="pull-right">
+                <select id="lang-select" onchange="window.location.href = this.value">
+                    {% for other in site.posts %}
+                        {% if other.ref == page.ref %}
+                            {% if page.lang == other.lang %}
+                                <option value="{{ site.url }}{{ other.url }}" selected="selected">
+                                    {% include components/content/language-string.html lang = other.lang %}
+                                </option>
+                            {% else %}
+                                <option value="{{ site.url }}{{ other.url }}">
+                                    {% include components/content/language-string.html lang = other.lang %}
+                                </option>
                             {% endif %}
-                        {% endfor %}
-                    </select>
-                </div>
-            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row m-lg-auto col-sm-12 col-xs-12 blog-post-content">
+            <article>
+                {{ content }}
+            </article>
         </div>
 
-        <div class="col-xs-12 col-sm-7 col-lg-7">
-            <h2><small>Written by Sri Harsha Chilakapati on {{ page.date | date: "%b %-d, %Y" }}</small></h2>
+        <div class="row text-center blog-post-share-buttons">
+            {% include components/content/share-buttons.html url=page.url title=page.title %}
         </div>
-
-        <div class="col-xs-12 col-sm-5 col-lg-5">
-            <h2><small class="pull-right">{% include components/content/comments/comments-count.html %}</small></h2>
+        
+        <div class="row blog-post-comments">
+            {% include components/content/comments/comments.html %}
         </div>
     </div>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-  <div class="text-center">
-      {% include components/content/share-buttons.html url=page.url title=page.title %}
-  </div>
-
-  {% include components/content/comments/comments.html %}
 </div>

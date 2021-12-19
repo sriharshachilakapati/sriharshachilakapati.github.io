@@ -1,8 +1,5 @@
-pre
-{
+pre {
     padding: 15px;
-    padding-left: 20px;
-    font-size: initial;
 
     background-color: rgba(220, 220, 220, 0.3);
 
@@ -10,15 +7,11 @@ pre
     border-left: 5px solid #2980b9;
     border-radius: 0;
 
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 25px;
-
     max-width: 100%;
 }
 
-code
-{
-    max-width: 100%;
+code {
     color: #000000;
-    background-color: #f1f1f1;
 }
