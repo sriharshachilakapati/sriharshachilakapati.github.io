@@ -1,4 +1,4 @@
-.navbar li {
+.navbar li, .navbar-stacked li {
     font-size: 16px;
     line-height: 1.8em;
     margin: 0;
@@ -22,4 +22,34 @@
     background-color: #eeeeee;
     margin-top: -2px !important;
     border-top: 0px solid;
+}
+
+.toc > * {
+    display: block;
+}
+
+.toc {
+    min-width: 250px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 33px;
+    margin-top: 0;
+    margin-right: 0;
+    background-color: #e6e6e6;
+}
+
+.toc li {
+    padding: 5px 10px;
+}
+
+.toc li:hover {
+    background-color: #dadada;
+}
+
+.toc li.activeli {
+    background-color: #dadada;
+}
+
+.subli a {
+    margin-left: 2em;
 }

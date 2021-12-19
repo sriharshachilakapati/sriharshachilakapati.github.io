@@ -15,8 +15,8 @@
         {% assign class2 = 'subli' %}
     {% endif %}
 
-    <li>
-        <a class="{{ class1 }} {{ class2 }}" href="{{ href }}">
+    <li class="{{ class1 }} {{ class2 }}">
+        <a href="{{ href }}">
             {% if item.exists == false %}
                 <span style="color: #bb0000 !important;">
             {% endif %}
@@ -30,8 +30,8 @@
     </li>
 
     {% if item.children and include.showall == true %}
-        {% include components/content/tutorial-contents.html child=true items=item.children %}
+        {% include components/navigation/tutorial-contents.html child=true items=item.children %}
     {% elsif item.children and item.section == page.section and page.section != 0 %}
-        {% include components/content/tutorial-contents.html child=true items=item.children %}
+        {% include components/navigation/tutorial-contents.html child=true items=item.children %}
     {% endif %}
 {% endfor %}
