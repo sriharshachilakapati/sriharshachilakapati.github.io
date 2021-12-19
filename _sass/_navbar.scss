@@ -1,0 +1,25 @@
+.navbar li {
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+.dropdown-menu li.nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-link.dropdown-toggle.show {
+    background-color: #eeeeee;
+}
+
+.nav-link.dropdown-toggle.show[aria-expanded="true"] {
+    border: 1px solid #dadada;
+    border-bottom: 0;
+}
+
+.dropdown-menu {
+    background-color: #eeeeee;
+    margin-top: -2px !important;
+    border-top: 0px solid;
+}
