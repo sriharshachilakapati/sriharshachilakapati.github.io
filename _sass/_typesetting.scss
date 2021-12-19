@@ -1,19 +1,23 @@
-h1, h2, h3, h4, h5, h6
-{
-    color: #16a085;
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
 
     padding-top: 10px;
     padding-bottom: 15px;
-
-    text-align: left;
 }
 
-p
-{
+p, li, td, th {
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+p {
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+li {
+    margin-left: 4em;
 }
 
 code {
@@ -21,20 +25,21 @@ code {
     font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
     text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
     white-space: pre-wrap;
-    word-break: break-all;
     line-height: 1.6em;
 }
 
-body
-{
+pre code {
+    font-size: 1.13em;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 
-    line-height: 1.6em;
+    line-height: 1.8em;
 }
 
-.te p
-{
+.te p {
     font-family: 'Mallanna', sans-serif;
     font-size: 1.25em;
     line-height: 1.3em;
@@ -42,13 +47,11 @@ body
     color: #000;
 }
 
-.te h1, .te h2, .te h3, .te h4, .te h5, .te h6
-{
+.te h1, .te h2, .te h3, .te h4, .te h5, .te h6 {
     font-family: 'Raleway', 'Suravaram', sans-serif;
 }
 
-b
-{
+b {
     font-weight: 700;
 }
 
@@ -72,7 +75,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background: #eee;
+    background: #E6E6E6;
 }
 
 a {
@@ -87,12 +90,15 @@ a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
-.note
-{
+.note {
     background: #E3FFE3;
     padding: 20px;
     border-top: 5px solid #27ae60;
     border-bottom: 2px solid #27ae60;
     font-size: 1.2em;
     line-height: 1.4em;
+}
+
+article > p {
+    text-align: justify;
 }
