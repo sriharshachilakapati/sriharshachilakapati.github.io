@@ -16,6 +16,8 @@ description: The Open Diary - Something about everything
         {% for p in paginator.posts %}
             {% include components/content/blog-entry.html post=p %}
         {% endfor %}
+        
+        {% include components/content/pagination.html %}
 
         <div class="row">
             <p class="text-center">
