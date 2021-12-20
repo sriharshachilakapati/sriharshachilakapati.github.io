@@ -1,4 +1,19 @@
 .hero-card {
     background-image: url('/assets/images/sidebar_bg.png');
     background-size: cover;
+    min-height: 60vh;
+    margin: 0;
+}
+
+.hero-card h1 {
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 10px;
+    font-size: 72px;
+    color: #ffffff;
+}
+
+.greeting {
+    margin-bottom: 35px;
 }

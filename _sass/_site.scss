@@ -1,4 +1,4 @@
-$footer-height: 4em;
+$footer-height: 5em;
 
 html, body {
     margin: 0;
@@ -29,4 +29,38 @@ html, body {
 
 img {
     max-width: 100%;
+}
+
+section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section > * {
+    margin: 0 auto !important;
+}
+
+section .card {
+    border-radius: 20px;
+}
+
+section h1 {
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 44px;
+    margin-top: 40px !important;
+}
+
+section .card img {
+    padding: 20px;
+    height: 250px;
+    object-fit: contain;
+}
+
+section .card {
+    padding-top: 20px;
+}
+
+.card-title {
+    line-height: 1.5em;
 }

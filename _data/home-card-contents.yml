@@ -1,0 +1,59 @@
+- - image: /assets/images/home/feature-cards/FakeCaller.png
+    title: FakeCaller - POC of CallerID Detection
+    href: https://github.com/sriharshachilakapati/FakeCaller/
+        
+  - image: /assets/images/home/feature-cards/YT-Private-Subscriptions.png
+    title: YT Private Subscriptions - Subscribe to YouTube channels without signing in
+    href: https://github.com/sriharshachilakapati/yt-private-subscriptions-udacity-ios-nanodegree/
+        
+  - image: /assets/images/home/feature-cards/LocationReminder.png
+    title: Location Reminder - Set reminders with location data
+    href: https://github.com/sriharshachilakapati/location-reminder-udacity-android-nanodegree/
+        
+  - image: /assets/images/home/feature-cards/PoliticalPreparedness.jpg
+    title: PoliticalPreparedness - An app to find information about US Elections
+    href: https://github.com/sriharshachilakapati/political-preparedness-udacity-android-nanodegree/
+
+  - image: /assets/images/home/feature-cards/SimplyCpp.png
+    title: SimplyCpp - Simplest C++ IDE for Beginners
+    href: https://github.com/sriharshachilakapati/SimplyCpp/
+        
+  - image: /assets/images/home/feature-cards/SEProjectCreator.png
+    title: SEProjectCreator - Create multi-backend SilenceEngine based projects
+    href: https://github.com/sriharshachilakapati/SEProjectCreator/
+        
+  - image: /assets/images/home/feature-cards/FontPacker.png
+    title: FontPacker - Create Bitmap fonts for use in Games
+    href: https://github.com/sriharshachilakapati/FontPacker/
+        
+  - image: /assets/images/home/feature-cards/NaaGame.png
+    title: NaaGame - Drag & Drop Game creation tool for kids
+    href: https://github.com/sriharshachilakapati/NaaGame/
+        
+- - image: /assets/images/home/feature-cards/AndroILD.png
+    title: AndroILD - Android Image Loading Delegate
+    href: https://github.com/sriharshachilakapati/AndroILD/
+
+  - image: https://silenceengine.goharsha.com/img/logo_wide.png
+    title: SilenceEngine - 2D/3D Game Engine
+    href: https://silenceengine.goharsha.com/
+        
+  - image: /assets/images/home/feature-cards/GWT-AL.png
+    title: 'GWT-AL: An OpenAL Implementation based on Web Audio API'
+    href: https://github.com/sriharshachilakapati/GWT-AL/
+        
+  - image: /assets/images/home/feature-cards/WebGL4J.png
+    title: WebGL4J - A WebGL Wrapper for Java using GWT
+    href: https://github.com/sriharshachilakapati/WebGL4J/
+        
+- - image: /assets/images/home/feature-cards/Blox.png
+    title: Blox - A 3D Adventure Puzzle Platformer
+    href: https://github.com/sriharshachilakapati/Blox/
+        
+  - image: /assets/images/home/feature-cards/Breakout.gif
+    title: Breakout game written in Pure FP
+    href: https://github.com/sriharshachilakapati/prestodom-breakout-demo/
+        
+  - image: /assets/images/home/feature-cards/Sokoban.gif
+    title: Sokoban game written in Pure FP
+    href: https://github.com/sriharshachilakapati/prestodom-sokoban-demo/
