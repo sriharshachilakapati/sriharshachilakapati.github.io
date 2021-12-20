@@ -14,7 +14,7 @@ description: >
 permalink: "blog/:title/"
 baseurl: ""
 
-url: "/" #Generic URL for both localhost and server
+url: "" #Generic URL for both localhost and server
 
 # Blog pagination
 paginate: 5
