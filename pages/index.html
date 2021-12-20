@@ -5,6 +5,20 @@ description: |
     Welcome to my world! In this website, you will find everything in my world, from LWJGL tutorials to tech
     experiments! I love to code, and I love to talk about code.
 permalink: /
+sidebar: false
 ---
 
 {% include components/hero-intro.html %}
+
+<div class="container">
+    <section class="row align-items-center">
+        <h1>I make Apps (Android, iOS & Desktop)</h1>
+        {% include components/widgets/feature-cards.html cards=0 %} 
+
+        <h1>I write libraries & frameworks</h1>
+        {% include components/widgets/feature-cards.html cards=1 %} 
+        
+        <h1>I write games too!</h1>
+        {% include components/widgets/feature-cards.html cards=2 %} 
+    </section>
+</div>

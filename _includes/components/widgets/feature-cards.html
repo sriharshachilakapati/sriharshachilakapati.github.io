@@ -1,0 +1,23 @@
+<div class="row row-cols-1 row-cols-sm-2 g-5 mt-3">
+    {% for card in site.data.home-card-contents[include.cards] %}
+        <div class="col">
+            <div class="card h-100">
+                <a href="{{ card.href }}">
+                    {% assign imageParts = card.image | split: 'http' %}
+                    
+                    {% if imageParts[0] == blank %}
+                        {% assign imageUrl = card.image | prepend: site.url %}
+                    {% else %}
+                        {% assign imageUrl = card.image %}
+                    {% endif %}
+
+                    <img src="{{ imageUrl }}" class="card-img-top" alt="{{ card.title }}">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ card.title }}</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
