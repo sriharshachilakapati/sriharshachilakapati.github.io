@@ -2,7 +2,7 @@ blockquote {
   background: #f9f9f9;
   font-size: 1.7em;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
+  margin: 1.5em 10px !important;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
   line-height: 1.4em;
@@ -21,4 +21,14 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-size: 0.81em;
+}
+
+cite::before {
+    content: '— ';
 }
