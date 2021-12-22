@@ -7,45 +7,32 @@ layout: default
 </div>
 
 {% if page.ref %}
-    <div class="container-fluid blog-post-tags">
-        <div class="container">
+    <div class="blog-post-tags">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
             This page is also available in other languages
+            </div>
 
-            <div class="pull-right">
-                <select id="lang-select" onchange="window.location.href = this.value">
-                    {% for other in site.posts %}
-                        {% if other.ref == page.ref %}
-                            {% if page.lang == other.lang %}
-                                <option value="{{ site.url }}{{ other.url }}" selected="selected">
-                                    {% include components/content/language-string.html lang = other.lang %}
-                                </option>
-                            {% else %}
-                                <option value="{{ site.url }}{{ other.url }}">
-                                    {% include components/content/language-string.html lang = other.lang %}
-                                </option>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                </select>
+            <div>
+                {% include components/content/language/language-selector.html %}
             </div>
         </div>
     </div>
 {% endif %}
 
-<div class="container-fluid">
-    <div class="container">
-        <div class="row m-lg-auto col-sm-12 col-xs-12 blog-post-content">
-            <article>
-                {{ content }}
-            </article>
-        </div>
+<div class="container">
+    <div class="row m-lg-auto col-sm-12 col-xs-12 blog-post-content">
+        <article>
+            {{ content }}
+        </article>
+    </div>
 
-        <div class="row text-center blog-post-share-buttons">
-            {% include components/content/share-buttons.html url=page.url title=page.title %}
-        </div>
-        
-        <div class="row blog-post-comments">
-            {% include components/content/comments/comments.html %}
-        </div>
+    <div class="row text-center blog-post-share-buttons">
+        {% include components/content/share-buttons.html url=page.url title=page.title %}
+    </div>
+    
+    <div class="row blog-post-comments">
+        {% include components/content/comments/comments.html %}
     </div>
 </div>
+

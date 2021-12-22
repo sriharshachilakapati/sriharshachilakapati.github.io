@@ -1,0 +1,15 @@
+<select id="lang-select" onchange="window.location.href = this.value">
+    {% for other in site.posts %}
+        {% if other.ref == page.ref %}
+            {% if page.lang == other.lang %}
+                <option value="{{ site.url }}{{ other.url }}" selected="selected">
+                    {% include components/content/language/language-string.html lang = other.lang %}
+                </option>
+            {% else %}
+                <option value="{{ site.url }}{{ other.url }}">
+                    {% include components/content/language/language-string.html lang = other.lang %}
+                </option>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</select>

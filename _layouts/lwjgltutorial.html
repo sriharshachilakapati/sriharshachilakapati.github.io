@@ -2,21 +2,19 @@
 layout: page
 ---
 
-<article class="post-content">
-    {% unless page.updated %}
-        <p class="note text-center">
-            This series refer to an older version of LWJGL 3. The updates are in progress.
-        </p>
-    {% endunless %}
+{% unless page.updated %}
+    <p class="note text-center">
+        This series refer to an older version of LWJGL 3. The updates are in progress.
+    </p>
+{% endunless %}
 
-    <div class="pull-right">
-        <div class="toc">
-            <h3>Contents</h3>
-            <ul class="nav navbar-pills navbar-stacked">
-                {% include components/navigation/tutorial-contents.html items=site.data.lwjgltuts %}
-            </ul>
-        </div>
+<div class="pull-right">
+    <div class="toc">
+        <h3>Contents</h3>
+        <ul class="nav navbar-pills navbar-stacked">
+            {% include components/navigation/tutorial-contents.html items=site.data.lwjgltuts %}
+        </ul>
     </div>
+</div>
 
-    {{ content }}
-</article>
+{{ content }}

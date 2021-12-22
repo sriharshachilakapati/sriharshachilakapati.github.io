@@ -2,15 +2,13 @@
 layout: page
 ---
 
-<article class="post-content">
-    <div class="pull-right">
-        <div class="toc">
-            <h3>Contents</h3>
-            <ul class="nav navbar-pills navbar-stacked">
-                {% include components/navigation/tutorial-contents.html items=site.data.webgl4jtuts %}
-            </ul>
-        </div>
+<div class="pull-right">
+    <div class="toc">
+        <h3>Contents</h3>
+        <ul class="nav navbar-pills navbar-stacked">
+            {% include components/navigation/tutorial-contents.html items=site.data.webgl4jtuts %}
+        </ul>
     </div>
+</div>
 
-    {{ content }}
-</article>
+{{ content }}

@@ -14,6 +14,7 @@ html, body {
 
 #content {
     padding-bottom: $footer-height;
+    max-width: 100vw;
 }
 
 .footer {
@@ -25,6 +26,8 @@ html, body {
 
 .container {
     max-width: 900px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 img {
