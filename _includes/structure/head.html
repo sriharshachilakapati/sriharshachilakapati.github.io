@@ -11,10 +11,6 @@
     <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}{% if page.keywords and page.tags %}, {% endif %}{% assign keywords = page.keywords %}{% for tag in keywords %}{{ tag }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    {% if page.lang == 'te' %}
-    <link href="https://fonts.googleapis.com/css?family=Mallanna|Suravaram&amp;subset=telugu" rel="stylesheet">
-    {% endif %}
-
     <!-- Metadata for Google Webmaster Tools verification -->
     <meta name="google-site-verification" content="cobHVjKdC8AVsYtRjX_kiARRePeNQBG4-wvdw6MKy3s" />
 
@@ -40,8 +36,7 @@
     <link rel="stylesheet" href="{{site.url}}/assets/main.css">
 
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+    {% include structure/google-fonts.html %}
 
     {% if site.development %}
         <!-- Live Reload: livejs.com -->

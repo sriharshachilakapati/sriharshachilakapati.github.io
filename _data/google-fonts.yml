@@ -1,0 +1,8 @@
+base:
+  - Pacifico
+  - Roboto:700,400
+  - Raleway:500,300
+
+te:
+  - Mallanna&amp;subset=telugu
+  - Suravaram&amp;subset=telugu

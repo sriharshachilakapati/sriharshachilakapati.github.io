@@ -1,0 +1,7 @@
+{% for font in site.data.google-fonts["base"] %}
+    <link href='https://fonts.googleapis.com/css?family={{font}}' rel='stylesheet' type='text/css'>
+{% endfor %}
+
+{% for font in site.data.google-fonts[page.lang] %}
+    <link href='https://fonts.googleapis.com/css?family={{font}}' rel='stylesheet' type='text/css'>
+{% endfor %}
