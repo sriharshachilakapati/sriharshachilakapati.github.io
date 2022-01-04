@@ -87,7 +87,7 @@ description: 'GoHarsha.com Tag Archive'
                 $('#tagCloud').html($('#tagCloud').html() + tagTemplate.replace(/\$tag/g, tag));
             }
             
-            $('p:empty').remove();
+            $('#posts-with-tag p:empty').remove();
         });
     });
 </script>
