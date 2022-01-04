@@ -19,7 +19,7 @@
             {% include components/navigation/navbar.html %}
             
             <div id="content">
-                {{ content }}
+                {{ content | replace: '<img ', '<img loading="lazy" '}}
             </div>
             
             {% include components/footer.html %}
