@@ -1,8 +1,16 @@
 base:
-  - Pacifico
-  - Roboto:700,400
-  - Raleway:500,300
+  subset: latin
+  fonts:
+    - name: Pacifico
+
+    - name: Roboto
+      weights: 400;700
+
+    - name: Raleway
+      weights: 300;500
 
 te:
-  - Mallanna&amp;subset=telugu
-  - Suravaram&amp;subset=telugu
+  subset: telugu
+  fonts:
+    - name: Mallanna
+    - name: Suravaram

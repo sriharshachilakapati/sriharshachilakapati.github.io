@@ -1,0 +1,21 @@
+{% if include.font.subset %}
+    {% assign subset = include.font.subset %}
+{% else %}
+    {% assign subset = include.subset %}
+{% endif %}
+
+{% if include.font.weights %}
+    {% assign weights = include.font.weights %}
+{% else %}
+    {% assign weights = '400' %}
+{% endif %}
+
+{% assign baseURL = 'https://fonts.googleapis.com/css2' %}
+{% assign family = include.font.name %}
+
+{% capture fontURL %}
+    {{ baseURL }}?family={{ family }}:wght@{{ weights }}&subset={{ subset }}&display=swap
+{% endcapture %}
+
+<link rel="preload" as="style" href="{{ fontURL | strip }}">
+<link rel="stylesheet" href="{{ fontURL | strip }}">

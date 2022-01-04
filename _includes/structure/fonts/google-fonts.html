@@ -1,0 +1,14 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{% assign fontGroup = site.data.google-fonts["base"] %}
+
+{% for font in fontGroup.fonts %}
+    {% include structure/fonts/google-font-def.html font=font subset=fontGroup.subset %}
+{% endfor %}
+
+{% assign fontGroup = site.data.google-fonts[page.lang] %}
+
+{% for font in fontGroup.fonts %}
+    {% include structure/fonts/google-font-def.html font=font subset=fontGroup.subset %}
+{% endfor %}
