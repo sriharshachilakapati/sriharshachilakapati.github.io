@@ -4,25 +4,33 @@ title: Blog
 description: The Open Diary - Something about everything
 ---
 
-<div class="container-fluid blog-hero position-relative">
+<div class="container-fluid blog-hero">
     <h1 class="blog-title">The Open Diary</h1>
     <h2 class="blog-subtitle"><em><strong>Something</strong></em> about <em><strong>everything</strong></em></h2>
 </div>
 
-<div class="container">
-    <div class="row m-lg-auto">
+<div class="blog-post-tags">
+    <div class="container d-flex justify-content-between align-items-center">
         {% include components/content/pagination.html %}
+    </div>
+</div>
 
+<div class="container">
+    <div class="row m-lg-auto col-sm-12 col-xs-12 blog-post-content">
         {% for p in paginator.posts %}
             {% include components/content/blog-entry.html post=p %}
         {% endfor %}
-        
-        {% include components/content/pagination.html %}
+    </div>
 
-        <div class="row">
-            <p class="text-center">
-                Subscribe via <a href="{{site.url}}/feed.xml">RSS</a>
-            </p>
-        </div>
+    <div class="row mb-4">
+        <p class="text-center">
+            Subscribe via <a href="{{site.url}}/feed.xml">RSS</a>
+        </p>
+    </div>
+</div>
+
+<div class="blog-post-tags">
+    <div class="container d-flex justify-content-between align-items-center">
+        {% include components/content/pagination.html %}
     </div>
 </div>

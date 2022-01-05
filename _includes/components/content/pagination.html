@@ -1,33 +1,23 @@
-<div class="row pagination">
-    {% if paginator.total_pages > 1 %}
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous Page</a>
-            {% else %}
-                <span>&laquo; Previous Page</span>
-            {% endif %}
-        </div>
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>&laquo; Previous Page</kbd></a>
+{% else %}
+    <kbd>&laquo; Previous Page</kbd>
+{% endif %}
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <em>{{ page }}</em>
-                {% elsif page == 1 %}
-                    <a href="{{ '/blog/' | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ site.paginate_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                {% endif %}
-
-                &nbsp;
-            {% endfor %}
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">Next Page &raquo;</a>
-            {% else %}
-                <span>Next Page &raquo;</span>
-            {% endif %}
-        </div>
-    {% endif %}
+<div>
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+            <kbd><strong><em>{{ page }}</em></strong></kbd>
+        {% elsif page == 1 %}
+            <a href="{{ '/blog/' | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>{{ page }}</kbd></a>
+        {% else %}
+            <a href="{{ site.paginate_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><kbd>{{ page }}</kbd></a>
+        {% endif %}
+    {% endfor %}
 </div>
+
+{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>Next Page &raquo;</kbd></a>
+{% else %}
+    <span><kbd>Page &raquo;</kbd></span>
+{% endif %}
