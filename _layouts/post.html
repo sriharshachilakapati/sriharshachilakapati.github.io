@@ -19,12 +19,19 @@ layout: default
                 <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
             {% endfor %}
         </div>
+        
+        <div>
+            <strong>
+                {% include components/content/reading-time.html content=page.content %}
+                {{ "&nbsp;" | repeat: 4 }}
+                {% include components/content/comments/comments-count.html identifier=page.url %}
+            </strong>
 
-        {% if page.ref %}
-            <div>
+            {% if page.ref %}
+                {{ "&nbsp;" | repeat: 4 }}
                 {% include components/content/language/language-selector.html %}
-            </div>
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
 </div>
 

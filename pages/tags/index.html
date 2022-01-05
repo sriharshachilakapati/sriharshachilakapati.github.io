@@ -13,7 +13,7 @@ description: 'GoHarsha.com Tag Archive'
 <h2 id="tag_header">Posts tagged as <kbd><span id="tag_name">Loading</span></kbd></h2>
 
 <div id="template" style="display: none;">
-    {% include components/content/blog-entry.html postUrl='$postUrl' postTitle='$postTitle' postDate='$date' postExcerpt='$excerpt' tags='$tags' %}
+    {% include components/content/blog-entry.html postUrl='$postUrl' postTitle='$postTitle' postDate='$date' postExcerpt='$excerpt' tags='$tags' reading-time='$timeToRead' %}
 </div>
 
 <div id="posts-with-tag">
@@ -77,6 +77,7 @@ description: 'GoHarsha.com Tag Archive'
                     .replace(/\$postTitle/g, post.title)
                     .replace(/\$date/g, post.date)
                     .replace(/\$tags/g, tags)
+                    .replace(/\$timeToRead/g, post.timeToRead)
                     .replace(/\$excerpt/g, post.excerpt);
 
                 $('#posts-with-tag').html($('#posts-with-tag').html() + template);

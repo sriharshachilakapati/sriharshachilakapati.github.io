@@ -20,8 +20,11 @@
             <small class="float-right">
                 {% if include.post %}
                     {% include components/content/reading-time.html post=include.post %}
-                    {{ "&nbsp;" | repeat: 4 }}
+                {% else %}
+                    {% include components/content/reading-time.html reading-time=include.reading-time %}
                 {% endif %}
+
+                {{ "&nbsp;" | repeat: 4 }}
 
                 {% include components/content/comments/comments-count.html identifier=postUrl %}
             </small>

@@ -10,6 +10,7 @@ permalink: /tags.json
             "url": "{{ post.url }}",
             "date": "{{ post.date | date: "%b %-d, %Y" }}",
             "excerpt": {{ post.excerpt | jsonify }},
+            "timeToRead": "{{ post.content | number_of_words | divided_by: 180 | plus: 1 }}",
             "tags": [
                 {% for tag in post.tags %}
                     "{{ tag }}"{% if forloop.last == false %},{% endif %}

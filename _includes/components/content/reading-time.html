@@ -1,4 +1,12 @@
-<span class="fa fas fa-clock-o"></span>
-<span>
-    {{ include.post.content | number_of_words | divided_by: 180 | plus: 1 }}m
-</span>
+{% if include.post != null %}
+    {% include components/content/reading-time.html content=include.post.content %}
+{% else %}
+    <span class="fa fas fa-clock-o"></span>
+    <span>
+        {% if include.content != null %}
+            {{ include.content | number_of_words | divided_by: 180 | plus: 1 }}m
+        {% else %}
+            {{ include.reading-time }}m
+        {% endif %}
+    </span>
+{% endif %}
