@@ -19,5 +19,5 @@
 {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>Next Page &raquo;</kbd></a>
 {% else %}
-    <span><kbd>Page &raquo;</kbd></span>
+    <span><kbd>Next Page &raquo;</kbd></span>
 {% endif %}
