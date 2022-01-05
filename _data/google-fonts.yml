@@ -8,6 +8,8 @@ base:
 
     - name: Raleway
       weights: 300;500
+      
+    - name: Fira Code
 
 te:
   subset: telugu

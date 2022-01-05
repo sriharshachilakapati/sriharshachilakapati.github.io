@@ -11,7 +11,7 @@
 {% endif %}
 
 {% assign baseURL = 'https://fonts.googleapis.com/css2' %}
-{% assign family = include.font.name %}
+{% assign family = include.font.name | replace: ' ', '+' %}
 
 {% capture fontURL %}
     {{ baseURL }}?family={{ family }}:wght@{{ weights }}&subset={{ subset }}&display=swap
