@@ -88,6 +88,8 @@ description: 'GoHarsha.com Tag Archive'
             }
             
             $('#posts-with-tag p:empty').remove();
+            
+            DISQUSWIDGETS.getCount({reset: true});
         });
     });
 </script>
