@@ -1,7 +1,5 @@
 .hero-card {
-    background-color: #0a1d2f;
-    background-image: url('/assets/images/sidebar_bg.png');
-    background-size: cover;
+    @include primary;
     min-height: 60vh;
     margin: 0;
 }
@@ -12,7 +10,6 @@
     font-weight: normal;
     margin-top: 10px;
     font-size: 72px;
-    color: #ffffff;
 }
 
 .greeting {

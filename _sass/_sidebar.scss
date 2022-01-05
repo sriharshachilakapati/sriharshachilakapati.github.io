@@ -5,13 +5,11 @@ $sidebar-width: 320px;
 }
 
 .sidebar-content {
+    @include primary;
+
     position: fixed;
     padding-top: 60px;
 
-    background-color: #0a1d2f;
-    background-image: url('/assets/images/sidebar_bg.png');
-    background-size: cover;
-    
     min-height: 100vh;
     width: $sidebar-width;
 }
@@ -27,24 +25,18 @@ $sidebar-width: 320px;
     margin-top: 10px;
     font-size: 28px;
     text-align: center;
-    color: #ffffff;
 }
 
 .profile-text {
     font-family: Roboto;
-    color: #ffffff;
     padding: 0;
     line-height: 20px;
     font-size: 15px;
 }
 
-.profile-icon {
-    color: #ffffff;
+.profile-icon, .profile-icon:hover {
+    @include primary;
     margin-left: 4px;
     margin-right: 4px;
     text-decoration: none;
-}
-
-.profile-icon:hover {
-    color: #ffffff;
 }

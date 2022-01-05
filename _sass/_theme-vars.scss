@@ -1,0 +1,54 @@
+$colorPrimary: #0A1D2F;
+$colorOnPrimary: #FFFFFF;
+
+$colorPrimaryVariant: #F8F9FA;
+
+$colorSecondary: #D6D6D6;
+$colorOnSecondary: #111111;
+
+$colorSecondaryVariant: #E9E9E9;
+
+$colorSurface: #F4F4F4;
+$colorOnSurface: #212529;
+
+$colorControl: #E0E0E0;
+$colorOnControl: #333333;
+
+$windowBg: #EEEEEE;
+
+@mixin primary {
+    background-color: $colorPrimary;
+    color: $colorOnPrimary;
+
+    background-image: url('/assets/images/sidebar_bg.png');
+    background-size: cover;
+}
+
+@mixin primaryVariant {
+    background-color: $colorPrimaryVariant;
+    color: $colorOnSecondary;
+}
+
+@mixin secondary {
+    background-color: $colorSecondary;
+    color: $colorOnSecondary;
+}
+
+@mixin secondaryVariant {
+    background-color: $colorSecondaryVariant;
+    color: $colorOnSecondary;
+}
+
+@mixin surface {
+    background-color: $colorSurface;
+    color: $colorOnSurface;
+}
+
+@mixin control {
+    background-color: $colorControl;
+    color: $colorOnControl;
+    
+    &:hover {
+        background-color: darken($color: $colorControl, $amount: 5%);
+    }
+}

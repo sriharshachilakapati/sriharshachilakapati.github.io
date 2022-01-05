@@ -3,13 +3,13 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #D6D6D6;
+    border-bottom: 1px solid $colorSecondary;
     margin: 0;
 }
 
 .post-blog-entry {
+    @include surface;
     padding: 20px;
-    background-color: #F3F3F3;
     margin: 16px 0px;
     border-radius: 20px;
 }
@@ -55,7 +55,8 @@
 }
 
 .blog-hero {
-    background-color: #D6D6D6;
+    @include secondary;
+
     padding-top: 30px;
     padding-bottom: 35px;
     text-align: center;
@@ -75,9 +76,9 @@
 }
 
 .blog-post-tags {
+    @include secondaryVariant;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D6D6D6;
 }
 
 .blog-post-content, .blog-post-comments, .blog-post-share-buttons {
@@ -85,8 +86,7 @@
 }
 
 #lang-select {
-    color: #333;
-    background: #E1E1E1;
+    @include control;
     padding: 7px 10px;
     margin: 2px;
     display: inline-block;

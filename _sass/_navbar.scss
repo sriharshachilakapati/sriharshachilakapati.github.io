@@ -1,27 +1,21 @@
+.navbar {
+    @include primaryVariant;
+}
+
 .navbar li, .navbar-stacked li {
     font-size: 16px;
     line-height: 1.8em;
     margin: 0;
 }
 
+.dropdown-menu.show {
+    min-width: max-content;
+}
+
 .dropdown-menu li.nav-item {
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.nav-link.dropdown-toggle.show {
-    background-color: #eeeeee;
-}
-
-.nav-link.dropdown-toggle.show[aria-expanded="true"] {
-    border: 1px solid #dadada;
-    border-bottom: 0;
-}
-
-.dropdown-menu {
-    background-color: #eeeeee;
-    margin-top: -2px !important;
-    border-top: 0px solid;
+    padding: 0;
 }
 
 .toc > * {
@@ -29,25 +23,21 @@
 }
 
 .toc {
+    @include secondaryVariant;
     min-width: 250px;
     max-width: 100%;
     padding: 20px;
     margin: 33px;
     margin-top: 0;
     margin-right: 0;
-    background-color: #e6e6e6;
 }
 
 .toc li {
     padding: 5px 10px;
 }
 
-.toc li:hover {
-    background-color: #dadada;
-}
-
-.toc li.activeli {
-    background-color: #dadada;
+.toc li:hover, .toc li.activeli {
+    background-color: darken($color: $colorSecondaryVariant, $amount: 5%);
 }
 
 .subli a {
