@@ -30,7 +30,7 @@ code {
 }
 
 pre code {
-    font-size: 1.13em;
+    font-size: 1rem;
 }
 
 body {
@@ -40,16 +40,17 @@ body {
     line-height: 1.8em;
 }
 
-.te p {
-    font-family: 'Mallanna', sans-serif;
-    font-size: 1.25em;
-    line-height: 1.3em;
-    font-weight: 500;
+.te article p {
+    font-family: 'Roboto', 'Noto Sans Telugu';
+    font-size: 13pt;
+    line-height: 25pt;
     color: #000;
 }
 
-.te h1, .te h2, .te h3, .te h4, .te h5, .te h6 {
+.te article h1, .te article h2, .te article h3, .te article h4, .te article h5, .te article h6 {
     font-family: 'Raleway', 'Suravaram', sans-serif;
+    font-size: 25pt;
+    font-weight: 700;
 }
 
 b {

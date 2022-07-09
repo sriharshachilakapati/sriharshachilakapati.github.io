@@ -14,5 +14,5 @@ base:
 te:
   subset: telugu
   fonts:
-    - name: Mallanna
+    - name: Noto Sans Telugu
     - name: Suravaram
