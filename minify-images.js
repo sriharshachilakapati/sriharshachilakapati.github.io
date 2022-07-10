@@ -5,9 +5,21 @@ import imageminGifsicle from 'imagemin-gifsicle';
 import imageminSvgo from 'imagemin-svgo';
 
 import fs from 'fs/promises';
+import util from 'util';
+import { exec as raw_exec } from 'child_process';
+
+const exec = util.promisify(raw_exec);
+
+const allowedExtensions = [
+    "jpg",
+    "jpeg",
+    "gif",
+    "png",
+    "svg"
+]
 
 async function minifyImages(directory) {
-    await imagemin([ `${directory}/*.{jpg,jpeg,gif,png}` ], {
+    await imagemin([ `${directory}/*.{${ allowedExtensions.join(",") }}` ], {
         destination: directory,
         strip: true,
         verbose: true,
@@ -54,11 +66,42 @@ async function getFileSizes(sizes, directory) {
         const path = `${directory}/${file}`;
         const stat = await fs.stat(path);
 
-        if (stat.isDirectory()) {
+        if (stat.isDirectory() || allowedExtensions.filter(it => path.endsWith(`.${it}`)).length == 0) {
             continue;
         }
 
         sizes[path] = stat.size;
+    }
+}
+
+async function getChangedFiles(preSizes, postSizes) {
+    const results = [];
+    const { stdout } = await exec("git diff --name-only");
+    const allChangedFiles = stdout.split('\n').map(it => it.trim());
+
+    for (const fileName in preSizes) {
+        if (allChangedFiles.indexOf(fileName) < 0) {
+            continue;
+        }
+
+        const sizeBefore = preSizes[fileName];
+        const sizeAfter = postSizes[fileName];
+        const difference = ((sizeAfter - sizeBefore) / (sizeBefore)) * 100;
+
+        results.push({
+            fileName,
+            sizeBefore,
+            sizeAfter,
+            difference: difference.toFixed(2)
+        });
+    }
+
+    return results;
+}
+
+async function addChangedFilesToGit(changedFiles) {
+    for (const file of changedFiles) {
+        await exec(`git add "${file.fileName}"`);
     }
 }
 
@@ -82,22 +125,14 @@ async function main() {
         await getFileSizes(postSizes, directory);
     }
 
-    const results = [];
+    const results = await getChangedFiles(preSizes, postSizes);
 
-    for (const fileName in preSizes) {
-        const sizeBefore = preSizes[fileName];
-        const sizeAfter = postSizes[fileName];
-        const difference = ((sizeAfter - sizeBefore) / (sizeBefore)) * 100;
-
-        results.push({
-            fileName,
-            sizeBefore,
-            sizeAfter,
-            difference: difference.toFixed(2)
-        });
+    if (results.length > 0) {
+        await addChangedFilesToGit(results);
+        console.table(results);
+    } else {
+        console.log('All images are already optimized :)');
     }
-
-    console.table(results);
 }
 
 await main();

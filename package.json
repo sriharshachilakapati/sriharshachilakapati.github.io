@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "minify-images": "node minify-images.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node-git-hooks"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1"
+  },
+  "devDependencies": {
+    "node-git-hooks": "^1.0.6"
   }
 }

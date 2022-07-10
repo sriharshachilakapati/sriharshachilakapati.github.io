@@ -6,6 +6,7 @@ specifiers:
   imagemin-jpegtran: ^7.0.0
   imagemin-pngquant: ^9.0.2
   imagemin-svgo: ^10.0.1
+  node-git-hooks: ^1.0.6
 
 dependencies:
   imagemin: 8.0.1
@@ -13,6 +14,9 @@ dependencies:
   imagemin-jpegtran: 7.0.0
   imagemin-pngquant: 9.0.2
   imagemin-svgo: 10.0.1
+
+devDependencies:
+  node-git-hooks: 1.0.6
 
 packages:
 
@@ -1281,6 +1285,12 @@ packages:
   /nice-try/1.0.5:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
     dev: false
+
+  /node-git-hooks/1.0.6:
+    resolution: {integrity: sha512-ZTiTpRm16kxZY3JQugqjtm1u6nRt0cF2IH8lTMbiyv1V0qUA6ao8yHBwu4p58s3Ry+DbrlXOgUR4b4o/KzjWAA==}
+    engines: {node: '>=4.0.0'}
+    hasBin: true
+    dev: true
 
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
