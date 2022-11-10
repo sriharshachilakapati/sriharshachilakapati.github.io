@@ -2,27 +2,29 @@
 
 {% assign lang = 'en' %}
 {% if page.lang %}
-{% assign lang = page.lang %}
+    {% assign lang = page.lang %}
 {% endif %}
 
 <html lang="{{ lang }}">
+    {% include structure/head.html %}
 
-{% include structure/head.html %}
+    <body>
+        {% include structure/google-analytics.html %}
 
-<body>
-    <div class="d-flex flex-row flex-no-wrap align-items-stretch">
-        {% if page.sidebar != false %}
-            {% include components/sidebar.html %}
-        {% endif %}
-        
-        <div class="wrapper flex-column flex-grow-1">
-            {% include components/navigation/navbar.html %}
-            
-            <div id="content" class="{{ page.lang }}">
-                {{ content | replace: '<img ', '<img loading="lazy" '}}
+        <div class="d-flex flex-row flex-no-wrap align-items-stretch">
+            {% if page.sidebar != false %}
+                {% include components/sidebar.html %}
+            {% endif %}
+
+            <div class="wrapper flex-column flex-grow-1">
+                {% include components/navigation/navbar.html %}
+
+                <div id="content" class="{{ page.lang }}">
+                    {{ content | replace: '<img ', '<img loading="lazy" '}}
+                </div>
+
+                {% include components/footer.html %}
             </div>
-            
-            {% include components/footer.html %}
         </div>
-    </div>
+    </body>
 </html>
