@@ -17,21 +17,25 @@
     <!-- Metadata for Bing Webmaster Tools verification -->
     <meta name="msvalidate.01" content="817384F01FE566476CDDCA469283D649" />
 
-	<!-- MathJax configuration -->
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config
-		({
-			TeX: { extensions: ["color.js"] },
-            showProcessingMessages: false,
-            messageStyle: "none",
-            tex2jax: {preview: 'none'}
-		});
-	</script>
-
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+    <!-- Keep jQuery for any legacy code (loaded deferred). Upgrade from 1.x to 3.x -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- MathJax v3: lightweight async loader and configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$','$'], ['\\(', '\\)']],
+                packages: {'[+]': ['color']}
+            },
+            options: {
+                skipHtmlTags: ['script','noscript','style','textarea','pre']
+            },
+            loader: {load: ['input/tex', 'output/chtml']}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
     <link rel="stylesheet" href="{{site.url}}/assets/main.css">
 
@@ -50,22 +54,6 @@
     {% if page.url == '/404.html' %}
         <META http-equiv="refresh" content="5;URL={{ site.url }}/">
     {% endif %}
-
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript">
-        window.cookieconsent_options = {
-            "message"  : "This website (rather static) doesn't really care who you are, but tools such as Google Analytics and Google Adsense may use cookies to track you.",
-            "dismiss"  : "Got it!",
-            "learnMore": "More info",
-            "link"     : "",
-            "theme"    : "dark-bottom"
-        };
-    </script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-    <!-- End Cookie Consent plugin -->
-
-    <script id="dsq-count-scr" src="https://goharsha.disqus.com/count.js" async></script>
 
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/font-awesome-4.6.1/css/font-awesome.min.css">
 </head>
