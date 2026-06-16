@@ -19,6 +19,7 @@
     "imagemin-svgo": "^10.0.1"
   },
   "devDependencies": {
-    "node-git-hooks": "^1.0.6"
+    "node-git-hooks": "^1.0.6",
+    "sitespeed.io": "^41.3.3"
   }
 }

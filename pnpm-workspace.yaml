@@ -1,0 +1,13 @@
+allowBuilds:
+  '@serialport/bindings-cpp': true
+  '@sitespeed.io/chromedriver': true
+  '@sitespeed.io/edgedriver': true
+  '@sitespeed.io/geckodriver': true
+  cpu-features: true
+  gifsicle: true
+  jpegtran-bin: true
+  node-hid: true
+  pngquant-bin: true
+  sitespeed.io: true
+  ssh2: true
+  usb: true
