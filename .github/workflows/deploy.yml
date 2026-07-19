@@ -2,7 +2,6 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -24,7 +23,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Setup Pages
@@ -40,6 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    if: github.ref_name == 'master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

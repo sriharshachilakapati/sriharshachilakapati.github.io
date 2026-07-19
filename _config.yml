@@ -48,4 +48,5 @@ exclude:
     "node_modules",
     ".obsidian",
     "vendor",
+    ".github",
   ]
