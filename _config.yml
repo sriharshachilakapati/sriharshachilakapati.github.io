@@ -14,7 +14,7 @@ description: >
 permalink: "blog/:title/"
 baseurl: ""
 
-url: "" #Generic URL for both localhost and server
+url: "https://goharsha.com"
 
 # Blog pagination
 paginate: 5
@@ -40,7 +40,6 @@ plugins:
 # Exclude certain files from Jekyll generation
 exclude:
   [
-    "CNAME",
     "LICENSE",
     "README.md",
     ".gitignore",
