@@ -17,8 +17,13 @@ baseurl: ""
 url: "https://goharsha.com"
 
 # Blog pagination
-paginate: 5
-paginate_path: "/blog/page:num/"
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page:num/'
+  collection: 'posts'
+  sort_field: 'date'
+  sort_reverse: true
 
 # Build settings
 markdown: kramdown
@@ -33,9 +38,9 @@ kramdown:
 host: "localhost"
 port: 8080
 
-# List of plugins for the website to compile (only paginate plugin is used)
+# List of plugins for the website to compile
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 # Exclude certain files from Jekyll generation
 exclude:

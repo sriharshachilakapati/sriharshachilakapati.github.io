@@ -11,7 +11,7 @@
         {% elsif page == 1 %}
             <a href="{{ '/blog/' | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>{{ page }}</kbd></a>
         {% else %}
-            <a href="{{ site.paginate_path | remove: 'index.html' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><kbd>{{ page }}</kbd></a>
+            <a href="{{ '/blog/page' | append: page | append: '/' | prepend: site.baseurl | replace: '//', '/' }}"><kbd>{{ page }}</kbd></a>
         {% endif %}
     {% endfor %}
 </div>
