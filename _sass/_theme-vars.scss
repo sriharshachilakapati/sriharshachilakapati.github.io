@@ -49,6 +49,6 @@ $windowBg: #EEEEEE;
     color: $colorOnControl;
     
     &:hover {
-        background-color: darken($color: $colorControl, $amount: 5%);
+        background-color: darken($colorControl, 5%);
     }
 }

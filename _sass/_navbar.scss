@@ -37,7 +37,7 @@
 }
 
 .toc li:hover, .toc li.activeli {
-    background-color: darken($color: $colorSecondaryVariant, $amount: 5%);
+    background-color: darken($colorSecondaryVariant, 5%);
 }
 
 .subli a {
