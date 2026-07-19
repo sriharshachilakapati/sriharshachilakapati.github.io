@@ -1,16 +1,16 @@
-@import "placeholders";
-@import "theme-vars";
+@forward "placeholders";
+@forward "theme-vars";
 
-@import "typesetting";
+@forward "typesetting";
 
-@import "site";
-@import "blockquote";
-@import "vs";
-@import "blog";
-@import "navbar";
-@import "syntax";
-@import "mathjax";
-@import "youtube";
-@import "tags";
-@import "sidebar";
-@import "hero-intro";
+@forward "site";
+@forward "blockquote";
+@forward "vs";
+@forward "blog";
+@forward "navbar";
+@forward "syntax";
+@forward "mathjax";
+@forward "youtube";
+@forward "tags";
+@forward "sidebar";
+@forward "hero-intro";

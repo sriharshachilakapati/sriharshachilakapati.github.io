@@ -1,3 +1,5 @@
+@use "theme-vars" as *;
+
 .hero-card {
     @include primary;
     min-height: 60vh;
