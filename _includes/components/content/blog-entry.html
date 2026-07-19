@@ -34,7 +34,7 @@
             <p class="tag-blog">
                 {% if include.post %}
                     {% for tag in tags %}
-                        <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
+                        <a href="/tags/{{ tag | slugify }}/"><kbd>{{ tag }}</kbd></a>
                     {% endfor %}
                 {% else %}
                     {{ tags }}

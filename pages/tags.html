@@ -1,0 +1,37 @@
+---
+layout: page
+title: 'Tag Archive'
+comments: false
+sitemap:
+    exclude: 'yes'
+permalink: '/tags/'
+excerpt: 'GoHarsha.com Tag Archive'
+description: 'GoHarsha.com Tag Archive'
+---
+
+<div id="tagCloud" class="col-xs-12 text-center">
+    {% for tag in site.tags %}
+        <a href="/tags/{{ tag[0] | slugify }}/"><kbd>{{ tag[0] }}</kbd></a>
+    {% endfor %}
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        var name = params.get('name');
+        if (name) {
+            fetch('/tags.json')
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    var match = data.tags.find(function(t) {
+                        return t.name.toLowerCase() === name.toLowerCase();
+                    });
+                    if (match) {
+                        window.location.replace('/tags/' + match.slug + '/');
+                    } else {
+                        window.location.replace('/tags/');
+                    }
+                });
+        }
+    })();
+</script>

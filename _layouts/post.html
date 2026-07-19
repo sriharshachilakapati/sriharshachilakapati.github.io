@@ -16,7 +16,7 @@ layout: default
     <div class="container d-flex justify-content-between align-items-center">
         <div>
             {% for tag in page.tags %}
-                <a href="/tags/?name={{ tag }}"><kbd>{{ tag }}</kbd></a>
+                <a href="/tags/{{ tag | slugify }}/"><kbd>{{ tag }}</kbd></a>
             {% endfor %}
         </div>
         
