@@ -24,6 +24,15 @@ paginate_path: "/blog/page:num/"
 markdown: kramdown
 highlighter: rouge
 
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+
 # Markdown settings
 kramdown:
   input: "GFM"
