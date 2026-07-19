@@ -47,4 +47,5 @@ exclude:
     "sitespeed-result",
     "node_modules",
     ".obsidian",
+    "vendor",
   ]
