@@ -2,5 +2,6 @@ _site/
 .jekyll-metadata
 .sass-cache
 .jekyll-cache
+.obsidian/
 node_modules/
 sitespeed-result/

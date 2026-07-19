@@ -26,22 +26,26 @@ highlighter: rouge
 
 # Markdown settings
 kramdown:
-    input: 'GFM'
-    syntax-highlighter: rouge
+  input: "GFM"
+  syntax-highlighter: rouge
 
 # Server settings
-host: 'localhost'
+host: "localhost"
 port: 8080
 
 # List of plugins for the website to compile (only paginate plugin is used)
 plugins:
-    - jekyll-paginate
+  - jekyll-paginate
 
 # Exclude certain files from Jekyll generation
-exclude: [
-  "CNAME",
-  "LICENSE",
-  "README.md",
-  ".gitignore",
-  ".tern-project"
-]
+exclude:
+  [
+    "CNAME",
+    "LICENSE",
+    "README.md",
+    ".gitignore",
+    ".tern-project",
+    "sitespeed-result",
+    "node_modules",
+    ".obsidian",
+  ]
