@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "theme-vars" as *;
+
 .navbar {
     @include primaryVariant;
 }
@@ -37,7 +40,7 @@
 }
 
 .toc li:hover, .toc li.activeli {
-    background-color: darken($colorSecondaryVariant, 5%);
+    background-color: color.adjust($colorSecondaryVariant, $lightness: -5%);
 }
 
 .subli a {

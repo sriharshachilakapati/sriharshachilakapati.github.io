@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $colorPrimary: #0A1D2F;
 $colorOnPrimary: #FFFFFF;
 
@@ -47,8 +49,8 @@ $windowBg: #EEEEEE;
 @mixin control {
     background-color: $colorControl;
     color: $colorOnControl;
-    
+
     &:hover {
-        background-color: darken($colorControl, 5%);
+        background-color: color.adjust($colorControl, $lightness: -5%);
     }
 }

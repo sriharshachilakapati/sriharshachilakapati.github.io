@@ -1,3 +1,5 @@
+@use "theme-vars" as *;
+
 blockquote {
   @include surface;
   font-size: 1.7em;
