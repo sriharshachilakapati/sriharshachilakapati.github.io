@@ -20,10 +20,27 @@ url: "https://goharsha.com"
 pagination:
   enabled: true
   per_page: 5
-  permalink: '/page:num/'
-  collection: 'posts'
-  sort_field: 'date'
+  permalink: "/page:num/"
+  collection: "posts"
+  sort_field: "date"
   sort_reverse: true
+
+# Auto pages for tags
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    layouts:
+      - "autopage_tags.html"
+    title: "Posts tagged with :tag"
+    permalink: "/tags/:tag"
+    slugify:
+      mode: "default"
+      case: false
 
 # Build settings
 markdown: kramdown

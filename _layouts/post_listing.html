@@ -1,14 +1,23 @@
 ---
 layout: default
-title: Blog
-description: The Open Diary - Something about everything
-pagination:
-  enabled: true
 ---
 
 <div class="container-fluid blog-hero">
-    <h1 class="blog-title">The Open Diary</h1>
-    <h2 class="blog-subtitle"><em><strong>Something</strong></em> about <em><strong>everything</strong></em></h2>
+    <h1 class="blog-title">
+        {% if page.autopages %}
+            {% assign slug = page.autopages.display_name | slugify %}
+            {% capture quoted_display_name %}
+                '{{ page.autopages.display_name }}'
+            {% endcapture %}
+            {{ page.title | replace: slug, quoted_display_name }}
+        {% else %}
+            {{ page.title }}
+        {% endif %}
+    </h1>
+
+    {% if page.subtitle %}
+      <h2 class="blog-subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
 </div>
 
 <div class="blog-post-tags">
