@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "minify-images": "node minify-images.js",
-    "postinstall": "node-git-hooks"
+    "minify-images": "node minify-images.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +18,6 @@
     "imagemin-svgo": "^10.0.1"
   },
   "devDependencies": {
-    "node-git-hooks": "^1.0.6",
     "sitespeed.io": "^41.3.3"
   }
 }

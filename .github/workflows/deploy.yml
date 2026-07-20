@@ -20,15 +20,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
-          bundler-cache: true
+      - name: Setup tools
+        uses: jdx/mise-action@v4
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Install Ruby dependencies
+        run: bundle install
+
+      - name: Install Node dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Minify images
+        run: pnpm run minify-images
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

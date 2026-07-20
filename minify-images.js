@@ -5,10 +5,6 @@ import imageminGifsicle from 'imagemin-gifsicle';
 import imageminSvgo from 'imagemin-svgo';
 
 import fs from 'fs/promises';
-import util from 'util';
-import { exec as raw_exec } from 'child_process';
-
-const exec = util.promisify(raw_exec);
 
 const allowedExtensions = [
     "jpg",
@@ -74,40 +70,9 @@ async function getFileSizes(sizes, directory) {
     }
 }
 
-async function getChangedFiles(preSizes, postSizes) {
-    const results = [];
-    const { stdout } = await exec("git diff --name-only");
-    const allChangedFiles = stdout.split('\n').map(it => it.trim());
-
-    for (const fileName in preSizes) {
-        if (allChangedFiles.indexOf(fileName) < 0) {
-            continue;
-        }
-
-        const sizeBefore = preSizes[fileName];
-        const sizeAfter = postSizes[fileName];
-        const difference = ((sizeAfter - sizeBefore) / (sizeBefore)) * 100;
-
-        results.push({
-            fileName,
-            sizeBefore,
-            sizeAfter,
-            difference: difference.toFixed(2)
-        });
-    }
-
-    return results;
-}
-
-async function addChangedFilesToGit(changedFiles) {
-    for (const file of changedFiles) {
-        await exec(`git add "${file.fileName}"`);
-    }
-}
-
 async function main() {
     const directories = [];
-    
+
     directories.push(
         ... await findAssetDirectories('assets/images'),
         ... await findAssetDirectories('assets/social-icons'),
@@ -125,10 +90,22 @@ async function main() {
         await getFileSizes(postSizes, directory);
     }
 
-    const results = await getChangedFiles(preSizes, postSizes);
+    const results = [];
+
+    for (const fileName in preSizes) {
+        const sizeBefore = preSizes[fileName];
+        const sizeAfter = postSizes[fileName];
+        const difference = ((sizeAfter - sizeBefore) / (sizeBefore)) * 100;
+
+        results.push({
+            fileName,
+            sizeBefore,
+            sizeAfter,
+            difference: difference.toFixed(2)
+        });
+    }
 
     if (results.length > 0) {
-        await addChangedFilesToGit(results);
         console.table(results);
     } else {
         console.log('All images are already optimized :)');
