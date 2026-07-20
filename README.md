@@ -36,8 +36,6 @@ bundle install
 # Serve locally (with development config)
 bundle exec jekyll serve --watch --config _config.yml,_development.yml
 
-# Minify images
-pnpm run minify-images
+# Minify images (after build)
+./scripts/minify-images.js _site
 ```
-
-Git hooks are set up automatically via `pnpm install` (using `node-git-hooks`) to run image minification on commit.
