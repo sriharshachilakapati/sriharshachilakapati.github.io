@@ -1,0 +1,11 @@
+allowBuilds:
+  '@serialport/bindings-cpp': true
+  '@sitespeed.io/chromedriver': set this to true or false
+  '@sitespeed.io/edgedriver': set this to true or false
+  '@sitespeed.io/geckodriver': set this to true or false
+  cpu-features: true
+  node-hid: true
+  sharp: set this to true or false
+  sitespeed.io: set this to true or false
+  ssh2: true
+  usb: true
