@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Ruby dependencies
         run: |
-          bundle config set path 
+          bundle config set path 'vendor/bundle'
           bundle install
 
       - name: Cache pnpm store
