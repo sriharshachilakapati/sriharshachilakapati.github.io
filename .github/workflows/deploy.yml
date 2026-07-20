@@ -23,6 +23,9 @@ jobs:
       - name: Setup tools
         uses: jdx/mise-action@v4
 
+      - name: Configure mise
+        run: mise settings ruby.compile=false
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
