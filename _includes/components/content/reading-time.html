@@ -1,7 +1,7 @@
 {% if include.post != null %}
     {% include components/content/reading-time.html content=include.post.content %}
 {% else %}
-    <span class="fa fas fa-clock-o"></span>
+    {% tabler ti-clock %}
     <span>
         {% if include.content != null %}
             {{ include.content | number_of_words | divided_by: 180 | plus: 1 }}m

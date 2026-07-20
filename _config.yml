@@ -58,6 +58,7 @@ port: 8080
 # List of plugins for the website to compile
 plugins:
   - jekyll-paginate-v2
+  - jekyll-tabler
 
 # Exclude certain files from Jekyll generation
 exclude:
