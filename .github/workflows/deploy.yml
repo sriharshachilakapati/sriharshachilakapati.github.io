@@ -25,18 +25,35 @@ jobs:
         with:
           install: false
 
-      - name: Configure mise
-        run: mise settings ruby.compile=false
-
-      - name: Install Tools
-        run: mise install
+      - name: Configure mise & install tools
+        run: |
+          mise settings ruby.compile=false
+          mise install
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
+      - name: Cache bundler gems
+        uses: actions/cache@v6
+        with:
+          path: vendor/bundle
+          key: bundler-${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            bundler-${{ runner.os }}-
+
       - name: Install Ruby dependencies
-        run: bundle install
+        run: |
+          bundle config set path 
+          bundle install
+
+      - name: Cache pnpm store
+        uses: actions/cache@v6
+        with:
+          path: ~/.local/share/pnpm/store/v3
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
 
       - name: Install Node dependencies
         run: pnpm install --frozen-lockfile
@@ -50,7 +67,7 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   deploy:
     if: github.ref_name == 'master'
@@ -62,4 +79,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
