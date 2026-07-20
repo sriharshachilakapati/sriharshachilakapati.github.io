@@ -24,9 +24,6 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1
     devDependencies:
-      node-git-hooks:
-        specifier: ^1.0.6
-        version: 1.0.6
       sitespeed.io:
         specifier: ^41.3.3
         version: 41.3.3
@@ -1921,11 +1918,6 @@ packages:
   node-forge@1.4.0:
     resolution: {integrity: sha512-LarFH0+6VfriEhqMMcLX2F7SwSXeWwnEAJEsYm5QKWchiVYVvJyV9v7UDvUv+w5HO23ZpQTXDv/GxdDdMyOuoQ==}
     engines: {node: '>= 6.13.0'}
-
-  node-git-hooks@1.0.6:
-    resolution: {integrity: sha512-ZTiTpRm16kxZY3JQugqjtm1u6nRt0cF2IH8lTMbiyv1V0qUA6ao8yHBwu4p58s3Ry+DbrlXOgUR4b4o/KzjWAA==}
-    engines: {node: '>=4.0.0'}
-    hasBin: true
 
   node-gyp-build@4.6.0:
     resolution: {integrity: sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==}
@@ -5248,8 +5240,6 @@ snapshots:
       whatwg-url: 5.0.0
 
   node-forge@1.4.0: {}
-
-  node-git-hooks@1.0.6: {}
 
   node-gyp-build@4.6.0:
     optional: true
