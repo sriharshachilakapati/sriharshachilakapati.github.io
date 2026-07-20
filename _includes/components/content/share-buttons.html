@@ -2,37 +2,37 @@
 <div class="share-buttons">
     <b>Share on:</b>
 
+    {% capture full-url %}http://goharsha.com{{ include.url }}{% endcapture %}
+    {% assign url-escaped = full-url | url_encode %}
+
+
     <!--the Facebook base
     https://www.facebook.com/dialog/share? -->
+    {%- capture facebook-url -%}
+    https://www.facebook.com/sharer/sharer.php?u={{ url-escaped }}
+    {%- endcapture -%}
 
-    <a href="https://www.facebook.com/dialog/share?app_id=488995754626149&display=popup&href=http://goharsha.com{{ include.url }}&redirect_uri=http://goharsha.com{{ include.url }}" target="_blank">
+    <a href="{{ facebook-url }}" target="_blank">
         <kbd>
-            <!-- use the facebook logo for the link -->
-            <img
-                alt="..."
-                class="footer-icon"
-                width="25px"
-                src="{{ site.baseurl }}/assets/social-icons/fbicon.png">
-            </img>
+            {% tabler_filled ti-brand-facebook size=32 %}
 
             Facebook
         </kbd>
     </a>
-<!--the LinkedIn base url
-http://www.linkedin.com/shareArticle?mini=true -->
 
-<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://goharsha.com{{ include.url }}&title={{ include.title }}&source={{ include.title }}" target="_blank">
-    <kbd>
-        <!-- use the linkedin logo for the link -->
-        <img alt="..."
-        class="footer-icon"
-        width="34px"
-        src="{{ site.baseurl }}/assets/social-icons/lnicon.png">
-    </img>
+    <!--the LinkedIn base url
+    http://www.linkedin.com/shareArticle?mini=true -->
+    {%- capture linkedin-url -%}
+    http://www.linkedin.com/shareArticle?mini=true&url={{ url-escaped }}&title={{ include.title }}&source={{ include.title }}
+    {%- endcapture -%}
 
-    Linkedin
-</kbd>
-</a>
+    <a href="{{ linkedin-url }}" target="_blank">
+        <kbd>
+            {% tabler_filled ti-brand-linkedin size=32 %}
+
+            Linkedin
+        </kbd>
+    </a>
 
 </div>
 {% endif %}

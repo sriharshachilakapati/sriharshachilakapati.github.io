@@ -1,3 +1,6 @@
+# Switch URL to empty, so that localhost works. Otherwise it goes to actual production
+url: ""
+
 # Development mode, to enable it, use _development.yml along with _config.yml
 # jekyll serve --watch --config _config.yml,_development.yml
 development: true

@@ -1,15 +1,14 @@
-- icon: fa-twitter-square
+- icon: ti-brand-twitter
   href: https://twitter.com/shchilak/
 
-- icon: fa-github-square
+- icon: ti-brand-github
   href: https://github.com/sriharshachilakapati/
 
-- icon: fa-linkedin-square
+- icon: ti-brand-linkedin
   href: https://linkedin.com/in/sriharshachilakapati/
 
-- icon: fa-envelope-square
+- icon: ti-mail
   href: mailto:hello@goharsha.com
 
-- icon: fa-youtube-square
+- icon: ti-brand-youtube
   href: https://youtube.com/SriHarshaChilakapati/
-
