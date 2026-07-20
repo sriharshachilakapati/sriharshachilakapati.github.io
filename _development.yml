@@ -5,6 +5,7 @@ url: ""
 # jekyll serve --watch --config _config.yml,_development.yml
 development: true
 incremental: true
+livereload: true
 
 # Enable drafts and futures in development mode
 future: true

@@ -63,13 +63,20 @@ plugins:
 # Exclude certain files from Jekyll generation
 exclude:
   [
-    "LICENSE",
-    "README.md",
     ".gitignore",
     ".tern-project",
+    ".obsidian",
+    ".github",
+    ".jekyll-cache",
+    ".sass-cache",
     "sitespeed-result",
     "node_modules",
-    ".obsidian",
+    "scripts",
     "vendor",
-    ".github",
+    "mise.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "LICENSE",
+    "README.md",
   ]
