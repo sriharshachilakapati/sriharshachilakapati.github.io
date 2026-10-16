@@ -17,7 +17,7 @@ importers:
     devDependencies:
       sitespeed.io:
         specifier: ^41.3.3
-        version: 41.3.3
+        version: 41.3.3(debug@4.4.3)
 
 packages:
 
@@ -1721,8 +1721,8 @@ packages:
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   split@1.0.1:
@@ -2862,11 +2862,11 @@ snapshots:
 
   '@slack/types@2.21.1': {}
 
-  '@slack/webhook@7.0.6':
+  '@slack/webhook@7.0.6(debug@4.4.3)':
     dependencies:
       '@slack/types': 2.21.1
       '@types/node': 18.0.3
-      axios: 1.18.0
+      axios: 1.18.0(debug@4.4.3)
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -3157,9 +3157,9 @@ snapshots:
 
   axe-core@4.11.4: {}
 
-  axios@1.18.0:
+  axios@1.18.0(debug@4.4.3):
     dependencies:
-      follow-redirects: 1.16.0
+      follow-redirects: 1.16.0(debug@4.4.3)
       form-data: 4.0.6
       https-proxy-agent: 5.0.1
       proxy-from-env: 2.1.0
@@ -3355,12 +3355,12 @@ snapshots:
   css-tree@2.2.1:
     dependencies:
       mdn-data: 2.0.28
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-tree@2.3.1:
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-what@6.1.0: {}
 
@@ -3511,7 +3511,9 @@ snapshots:
       - supports-color
     optional: true
 
-  follow-redirects@1.16.0: {}
+  follow-redirects@1.16.0(debug@4.4.3):
+    optionalDependencies:
+      debug: 4.4.3
 
   form-data@2.5.6:
     dependencies:
@@ -4143,13 +4145,13 @@ snapshots:
   simple-xml-to-json@1.2.7:
     optional: true
 
-  sitespeed.io@41.3.3:
+  sitespeed.io@41.3.3(debug@4.4.3):
     dependencies:
       '@aws-sdk/client-s3': 3.1009.0
       '@google-cloud/storage': 7.19.0
       '@sitespeed.io/log': 2.0.0
       '@sitespeed.io/plugin': 1.0.2
-      '@slack/webhook': 7.0.6
+      '@slack/webhook': 7.0.6(debug@4.4.3)
       '@tgwf/co2': 0.16.9
       axe-core: 4.11.4
       browsertime: 27.5.0
@@ -4168,7 +4170,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   split@1.0.1:
     dependencies:
